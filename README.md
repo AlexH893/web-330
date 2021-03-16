@@ -1,2 +1,8 @@
-# web-330
- Repo for class web-330
+# WEB 330 Enterprise JavaScript II
+
+
+## Contributors
+
+
+- Alex Haefner
+- Richard Krasso
