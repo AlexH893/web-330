@@ -1,0 +1,62 @@
+<!--
+   ==================================================
+   ; Title: Assignment 1.3 - Environment Setup
+   ; Author: Alex Haefner
+   ; Date: 12 Jan 2021
+   ; Modified By: Alex Haefner
+   ; Description: This program's purpose is to create 
+   ; a landing page to the courses GitHub repository 
+   ; and publish the content to GitHub pages
+   ;=================================================
+   -->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>WEB 330 – Enterprise JavaScript II</title>
+      <link rel="stylesheet" href="theme.css">
+      <link rel="stylesheet" href="site.css">
+   </head>
+   <body class="light-theme">
+      <!-- Putting most of the pages' content in a div with a class of container.
+         This way, we are able to style everything equally using CSS.
+         --> 
+      <i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 28px;">
+      <span id="icon-text"></span>
+      </i>		
+      <div class="container">
+         <h1>Alex Haefner's Landing Page</h1>
+         <h2>WEB 330 Enterprise JavaScript II</h2>
+         <hr>
+         <!-- List of weekly assignments -->
+         <h3>Weekly Assignments</h3>
+         <ul>
+            <li><a href="">Assignment 2.2</a></li>
+            <li><a href="">Assignment 3.2</a></li>
+            <li><a href="">Assignment 4.2</a></li>
+            <li><a href="">Assignment 5.2</a></li>
+            <li><a href="">Assignment 6.2</a></li>
+            <li><a href="">Assignment 7.2</a></li>
+            <li><a href="">Assignment 8.2</a></li>
+         </ul>
+         <!--List of projects -->
+         <h3>Projects</h3>
+         <ul>
+            <li><a href="">Personal Portfolio</a></li>
+            <li><a href="https://github.com/AlexH893/web-330" target="_blank">WEB 330's Landing Page</a></li>
+         </ul>
+         <!--List of important links -->
+         <h4>Important Links</h4>
+         <ul>
+            <li><a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a></li>
+            <li><a href="http://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validator</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a></li>
+            <li><a href="https://www.w3schools.com/js/js_best_practices.asp" target="_blank">JavaScript Best Practices</a></li>
+            <li><a href="https://github.com/buwebdev/web-330" target="_blank">WEB 330’s GitHub Repository</a></li>
+            <li><a href="ttps://bruinconnect.bellevue.edu/" target="_blank">BRUIN Connect</a></li>
+         </ul>
+      </div>
+   </body>
+   <!--Inluding the theme.js script. -->
+   <script src="theme.js"></script>
+</html>
