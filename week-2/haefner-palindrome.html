@@ -24,6 +24,7 @@
             <h1 class="app-header">Welcome to the Palindrome App!</h1>
             <div class="card">
                <div class="card-title">Palindrome Checker</div>
+               <div class="card-content">               
                <div class="form">
                   <div class="form-field">
                      <label>Phrase Value:</label>
@@ -32,13 +33,11 @@
                   <div class="form-field">
                      <button id="btnCheckPhrase" class="btn btn-primary full-width" onclick="checkForPalindrome()">Check Phrase</button>
                   </div>
+                  </div>
                </div>
-               <br>
-               <!-- Link to return back to the index.html page. -->
-               <a class="return-home" href="../index.html">Return</a>  
+            <!-- Link to return back to the index.html page. -->
+            <a class="return-home" href="../index.html">Return</a>  
             </div>
-            <br>
-
 
             <!--Card to display results-->
             <div id="results-container">
@@ -52,10 +51,6 @@
          </div>
         
 	<script>
-
-
-
-
 
 	function getTodaysDate() {
 		return date = new Date().toLocaleDateString("en-US");

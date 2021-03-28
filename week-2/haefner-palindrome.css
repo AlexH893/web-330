@@ -1,5 +1,12 @@
-.palindrome-results {
+/*
+  Title: haefner-palindrome.css
+  Author: Alex Haefner
+  Date: 3-25-2021
+  Description: CSS Styling for the palindrome assignment.
+*/
 
-text-align: center;
-
+/** Styling results */
+#palindrome-results {
+    text-align: center;
+    font-size: 28px;
 }
