@@ -2,7 +2,7 @@
 =================================================================
 ; Title: Assignment 1.3 - Environment Setup
 ; Author: Alex Haefner
-; Date: 21 March 2021
+; Date: 22 March 2021
 ; Modified By: Alex Haefner
 ; Description: CSS file to change elements based on selected theme
 ;================================================================
@@ -17,10 +17,11 @@
 }
 
 .card-title {
-	text-align: center;
-	font-size: 2em;
-	color: var(--card-title-color);
-	font-weight: 400;
+    text-align: center;
+    font-size: 2em;
+    color: var(--card-title-color);
+    font-weight: 400;
+    
 }
 
 
