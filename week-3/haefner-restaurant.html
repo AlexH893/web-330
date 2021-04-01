@@ -15,6 +15,7 @@
          <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
          <link rel="stylesheet" href="../theme.css" type="text/css">
          <link rel="stylesheet" href="../site.css" type="text/css">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
          <link rel="stylesheet" href="haefner-palindrome.css" type="text/css">
 
@@ -23,91 +24,107 @@
       <body class="light-theme">
          <div id="container">
             <div class="app-header">Welcome to the Restaurant App!</div>
-            <div class="card">
+            <!-- Start of main card-->
+            <div class="card"> 
                <div class="card-title">Restaurant Menu</div>
                <div class="card-content">               
-               <div class="form">
+              <!-- <div class="form">
                   <div class="form-field">
                      <button id="placeOrders" class="btn btn-primary full-width" onclick="">Place Order</button>
                   </div>
+                  </div> -->
+               </div>
+
+               <div class = "card">
+
+               <!-- Main Courses -->                  
+                  <div class= "card-title">Main Courses</div>
+                  <div class = "card-content" id="main-courses">
+                     <label for="tacos">Street Tacos ($9.70)
+                        <input type="checkbox" id="tacos" name="tacoCheck">
+                     </label><br>
+                     <label for="tacos">Boneless Wings ($12.80)
+                        <input type="checkbox" id="wings" name="wingsCheck">
+                     </label><br>      
+                     <label for="burger">Cheese Burger with Fries ($12.65)
+                        <input type="checkbox" id="burger" name="burgerCheck">
+                     </label><br>      
+                     <label for="wrap">Chicken Wrap with Salad ($9.65)
+                        <input type="checkbox" id="wrap" name="wrapCheck">
+                     </label><br>   
                   </div>
                </div>
+               <!-- Beverages -->
+               <div class = "card">
+                  <div class= "card-title">Beverages</div>
+                  <div class = "card-content" id="main-courses">
+                     <label for="soda">Soda ($3.30)
+                        <input type="checkbox" id="soda" name="sodaCheck">
+                     </label><br>
+                     <label for="tea">Sweet Tea ($3.30)
+                        <input type="checkbox" id="tea" name="teaCheck">
+                     </label><br>      
+                     <label for="coffee">Iced Coffee ($2.49)
+                        <input type="checkbox" id="burger" name="coffeeCheck">
+                     </label><br>      
+                     <label for="water">Bottled Water ($2.15)
+                        <input type="checkbox" id="water" name="waterCheck">
+                     </label><br>   
+                  </div>
+               </div>
+
+               <!-- Appetizers -->
+               <div class = "card">
+                  <div class= "card-title">Appetizers</div>
+                  <div class = "card-content" id="main-courses">
+                     <label for="nachos">Nachos ($6.60)
+                        <input type="checkbox" id="nachos" name="nachosCheck">
+                     </label><br>
+                     <label for="tea">Chips and Salsa ($5.50)
+                        <input type="checkbox" id="chips" name="chipsCheck">
+                     </label><br>      
+                     <label for="pretzel">Pretzel with Cheese ($8.80)
+                        <input type="checkbox" id="pretzel" name="pretzelCheck">
+                     </label><br>      
+                     <label for="pickles">Fried Pickles ($8.25)
+                        <input type="checkbox" id="pickles" name="picklesCheck">
+                     </label><br>   
+                  </div>
+               </div>
+
+               <!-- Desserts -->
+               <div class = "card">
+                  <div class= "card-title">Desserts</div>
+                  <div class = "card-content" id="main-courses">
+                     <label for="icecream">Ice Cream ($4.30)
+                        <input type="checkbox" id="icecream" name="icecreamCheck">
+                     </label><br>
+                     <label for="cake">Chocolate Cake ($5.40)
+                        <input type="checkbox" id="cake" name="cakeCheck">
+                     </label><br>      
+                     <label for="pie">Apple Pie ($3.80)
+                        <input type="checkbox" id="pie" name="pieCheck">
+                     </label><br>         
+                  </div>
+               </div>
+
+
+            <!-- End of main card-->
             </div>
 
-<div class = "card">
-   <div class= "card-title"> Main Courses</div>
-   <div class = "card-content" id="main-courses">
-      <label for="tacos">Street Tacos ($9.70)
-         <input type="checkbox" id="tacos" name="tacoCheck">
-      </label><br>
-      <label for="tacos">Boneless Wings ($12.80)
-         <input type="checkbox" id="wings" name="wingsCheck">
-      </label><br>      
-      <label for="burger">Cheese Burger with Fries ($12.65)
-         <input type="checkbox" id="burger" name="burgerCheck">
-      </label><br>      
-      <label for="wrap">Chicken Wrap with Salad ($9.65)
-         <input type="checkbox" id="wrap" name="wrapCheck">
-      </label><br>   
-   </div>
-</div>
 
 
 
 
-<div class = "card">
-   <div class= "card-title">Beverages</div>
-   <div class = "card-content" id="main-courses">
-      <label for="soda">Soda ($3.30)
-         <input type="checkbox" id="soda" name="sodaCheck">
-      </label><br>
-      <label for="tea">Sweet Tea ($3.30)
-         <input type="checkbox" id="tea" name="teaCheck">
-      </label><br>      
-      <label for="coffee">Iced Coffee ($2.49)
-         <input type="checkbox" id="burger" name="coffeeCheck">
-      </label><br>      
-      <label for="water">Bottled Water ($2.15)
-         <input type="checkbox" id="water" name="waterCheck">
-      </label><br>   
-   </div>
-</div>
 
 
-<div class = "card">
-   <div class= "card-title">Appetizers</div>
-   <div class = "card-content" id="main-courses">
-      <label for="nachos">Nachos ($6.60)
-         <input type="checkbox" id="nachos" name="nachosCheck">
-      </label><br>
-      <label for="tea">Chips and Salsa ($5.50)
-         <input type="checkbox" id="chips" name="chipsCheck">
-      </label><br>      
-      <label for="pretzel">Pretzel with Cheese ($8.80)
-         <input type="checkbox" id="pretzel" name="pretzelCheck">
-      </label><br>      
-      <label for="pickles">Fried Pickles ($8.25)
-         <input type="checkbox" id="pickles" name="picklesCheck">
-      </label><br>   
-   </div>
-</div>
+
+
+
 
    
 
-<div class = "card">
-   <div class= "card-title">Desserts</div>
-   <div class = "card-content" id="main-courses">
-      <label for="icecream">Ice Cream ($4.30)
-         <input type="checkbox" id="icecream" name="icecreamCheck">
-      </label><br>
-      <label for="cake">Chocolate Cake ($5.40)
-         <input type="checkbox" id="cake" name="cakeCheck">
-      </label><br>      
-      <label for="pie">Apple Pie ($3.80)
-         <input type="checkbox" id="pie" name="pieCheck">
-      </label><br>         
-   </div>
-</div>
+
 
 
 
