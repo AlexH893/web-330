@@ -6,6 +6,8 @@
 
 
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+   https://codepen.io/fabiobiondi/pen/PqeWGv  //flexbox
+
    -->
    <!DOCTYPE html>
    <html lang='en'>
@@ -15,9 +17,8 @@
          <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
          <link rel="stylesheet" href="../theme.css" type="text/css">
          <link rel="stylesheet" href="../site.css" type="text/css">
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-         <link rel="stylesheet" href="haefner-palindrome.css" type="text/css">
+         <link rel="stylesheet" href="haefner-restaurant.css" type="text/css">
 
          <title>WEB 231 – Enterprise JavaScript I</title>
       </head>
@@ -35,26 +36,12 @@
                   </div> -->
                </div>
 
-               <div class = "card">
+               <div class="grid2x2">
 
-               <!-- Main Courses -->                  
-                  <div class= "card-title">Main Courses</div>
-                  <div class = "card-content" id="main-courses">
-                     <label for="tacos">Street Tacos ($9.70)
-                        <input type="checkbox" id="tacos" name="tacoCheck">
-                     </label><br>
-                     <label for="tacos">Boneless Wings ($12.80)
-                        <input type="checkbox" id="wings" name="wingsCheck">
-                     </label><br>      
-                     <label for="burger">Cheese Burger with Fries ($12.65)
-                        <input type="checkbox" id="burger" name="burgerCheck">
-                     </label><br>      
-                     <label for="wrap">Chicken Wrap with Salad ($9.65)
-                        <input type="checkbox" id="wrap" name="wrapCheck">
-                     </label><br>   
-                  </div>
-               </div>
                <!-- Beverages -->
+
+               <div class="box box1">
+
                <div class = "card">
                   <div class= "card-title">Beverages</div>
                   <div class = "card-content" id="main-courses">
@@ -72,6 +59,34 @@
                      </label><br>   
                   </div>
                </div>
+            </div><!--!box1-->
+
+               <!-- Main Courses -->   
+               
+               <div class="box box2">
+             
+
+               <div class = "card">
+                  <div class= "card-title">Main Courses</div>
+                  <div class = "card-content" id="main-courses">
+                     <label for="tacos">Street Tacos ($9.70)
+                        <input type="checkbox" id="tacos" name="tacoCheck">
+                     </label><br>
+                     <label for="tacos">Boneless Wings ($12.80)
+                        <input type="checkbox" id="wings" name="wingsCheck">
+                     </label><br>      
+                     <label for="burger">Cheese Burger with Fries ($12.65)
+                        <input type="checkbox" id="burger" name="burgerCheck">
+                     </label><br>      
+                     <label for="wrap">Chicken Wrap with Salad ($9.65)
+                        <input type="checkbox" id="wrap" name="wrapCheck">
+                     </label><br>   
+                  </div>
+               </div>
+</div>
+
+
+               <div class="box box3">
 
                <!-- Appetizers -->
                <div class = "card">
@@ -91,22 +106,35 @@
                      </label><br>   
                   </div>
                </div>
-
-               <!-- Desserts -->
-               <div class = "card">
-                  <div class= "card-title">Desserts</div>
-                  <div class = "card-content" id="main-courses">
-                     <label for="icecream">Ice Cream ($4.30)
-                        <input type="checkbox" id="icecream" name="icecreamCheck">
-                     </label><br>
-                     <label for="cake">Chocolate Cake ($5.40)
-                        <input type="checkbox" id="cake" name="cakeCheck">
-                     </label><br>      
-                     <label for="pie">Apple Pie ($3.80)
-                        <input type="checkbox" id="pie" name="pieCheck">
-                     </label><br>         
-                  </div>
                </div>
+
+               <div class="box box4">
+              <!-- Desserts -->
+              <div class = "card">
+               <div class= "card-title">Desserts</div>
+               <div class = "card-content" id="main-courses">
+                  <label for="icecream">Ice Cream ($4.30)
+                     <input type="checkbox" id="icecream" name="icecreamCheck">
+                  </label><br>
+                  <label for="cake">Chocolate Cake ($5.40)
+                     <input type="checkbox" id="cake" name="cakeCheck">
+                  </label><br>      
+                  <label for="pie">Apple Pie ($3.80)
+                     <input type="checkbox" id="pie" name="pieCheck">
+                  </label><br>         
+               </div>
+            </div>
+</div>
+
+
+            </div> <!--!flex-->
+
+
+
+
+
+
+ 
 
 
             <!-- End of main card-->
@@ -145,6 +173,42 @@
          </div>
         
 	<script>
+
+      export class Product {
+
+         constructor (home, price) {
+
+            this.name = name;
+            this.price = price;
+            
+         }
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	</script>
 </body>
