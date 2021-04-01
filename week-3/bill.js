@@ -1,31 +1,31 @@
 //sources https://www.w3schools.com/jsref/jsref_tofixed.asp
 
+class bill {
+     _beverages = [];  _appetizers = [];  _mainCourses = [];  _desserts = [];
 
-    let _beverages = []; let _appetizers = []; let _mainCourses = []; let _desserts = [];
-
-    function addBeverage(beverage) {
+     addBeverage(beverage) {
 
         //Pushing the beverage object to the _beverages array.
         this._beverages.push(beverage);
     }
 
-    function addAppetizer(appetizer) {
+     addAppetizer(appetizer) {
 
         this._appetizers.push(appetizer);
 
     }
 
-    function addMainCourse(mainCourse) {
+     addMainCourse(mainCourse) {
 
         this._mainCourses.push(mainCourse);
     }
 
-    function addDessert(dessert){
+     addDessert(dessert){
 
         this._desserts.push(dessert);
     }
 
-    function getTotal() {
+     getTotal() {
         //Creating variable total with initial value of 0.
         let total = 0;
 
@@ -41,3 +41,5 @@
         });
 
     }
+
+}
