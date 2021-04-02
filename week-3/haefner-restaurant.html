@@ -7,6 +7,7 @@
 
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
    https://codepen.io/fabiobiondi/pen/PqeWGv  //flexbox
+   https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript //classes
 
    -->
    <!DOCTYPE html>
@@ -143,21 +144,6 @@
 
 
 
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
             <!-- Link to return back to the index.html page. -->
             <a class="return-home" href="../index.html">Return</a>  
 
@@ -197,9 +183,27 @@
          const dessertsEl = document.getElementById("desserts-card");
          const desserts = dessertsEl.getElementsByTagName("input");
 
-
-
+         //Creating a new instance of the bill class.
+         let bill = new Bill();
          
+
+         for (let mainCourses of mainCourses) {
+
+               //Checking if the checkbox is checked
+               if (mainCourse.checked) {
+
+                  bill.addMainCourse(new MainCourse(mainCourse.name, mainCourse.value));
+               }
+
+         }
+
+
+
+
+
+
+
+
       }
 
 
