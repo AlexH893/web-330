@@ -44,7 +44,7 @@
 
                <div class = "card">
                   <div class= "card-title">Beverages</div>
-                  <div class = "card-content" id="main-courses">
+                  <div class = "card-content" id="beverages-card">
                      <label for="soda">Soda ($3.30)
                         <input type="checkbox" id="soda" name="sodaCheck">
                      </label><br>
@@ -91,7 +91,7 @@
                <!-- Appetizers -->
                <div class = "card">
                   <div class= "card-title">Appetizers</div>
-                  <div class = "card-content" id="main-courses">
+                  <div class = "card-content" id="appetizers-card">
                      <label for="nachos">Nachos ($6.60)
                         <input type="checkbox" id="nachos" name="nachosCheck">
                      </label><br>
@@ -112,7 +112,7 @@
               <!-- Desserts -->
               <div class = "card">
                <div class= "card-title">Desserts</div>
-               <div class = "card-content" id="main-courses">
+               <div class = "card-content" id="desserts-card">
                   <label for="icecream">Ice Cream ($4.30)
                      <input type="checkbox" id="icecream" name="icecreamCheck">
                   </label><br>
@@ -180,9 +180,22 @@
 
       function orderItems() {
 
+         //Creating variables to hold the divs where the checkboxes are placed in the HTML.
+         //Main courses
+         const mainCoursesEl = document.getElementById("main-courses");
+         const mainCourses = mainCoursesEl.getElementsByTagName("input");
 
+         //Beverages
+         const beveragesEl = document.getElementById("beverages-card");
+         const beverages = beveragesEl.getElementsByTagName("input");
 
+         //Appetizers
+         const appetizersEl = document.getElementById("appetizers-card");
+         const appetizers = appetizersEl.getElementsByTagName("input");
 
+         //Desserts
+         const dessertsEl = document.getElementById("desserts-card");
+         const desserts = dessertsEl.getElementsByTagName("input");
 
 
 
