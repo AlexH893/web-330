@@ -30,11 +30,11 @@
             <div class="card"> 
                <div class="card-title">Restaurant Menu</div>
                <div class="card-content">               
-              <!-- <div class="form">
+               <div class="form">
                   <div class="form-field">
-                     <button id="placeOrders" class="btn btn-primary full-width" onclick="orderItems()">Place Order</button>
+                     <button id="btnOrder" class="btn btn-primary full-width">Place Order</button>
                   </div>
-                  </div> -->
+                  </div> 
                </div>
 
                <div class="grid2x2">
@@ -151,20 +151,23 @@
             <div id="results-container">
                <div class="card">
                   <div class="card-title">Order Summary</div>
-                  <div class="card-content" id="assign-results-header"></div>
-                  <div class="card-content" id="palindrome-results"></div>
+                  <div class="card-content assign-results-text" id="order-total"></div>
                </div>
                <br>
             </div>
          </div>
         
-	<script type = "module">
+        <script type="module">
 
       //Importing classes from the index file
-      import { Bill, Beverage, Appetizer, MainCourse, Dessert} from "./index.js";
+      import { Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js";
 
+      document.getElementById("btnOrder").addEventListener("click", myFunction);
+      
+      function myFunction() {
 
-      function orderItems() {
+         console.log("test");
+
 
          //Creating variables to hold the divs where the checkboxes are placed in the HTML.
          //Main courses
@@ -199,24 +202,46 @@
 
 
 
+         for (let beverages of beverages) {
+
+            if (beverages.checked) {
+             bill.addBeverage(new Beverage(beverage.name, beverage.value));
+            }
+
+         }
+
+         console.log(total);
+                  document.getElementById('order-total').innerHTML = total;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
       }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

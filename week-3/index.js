@@ -4,3 +4,4 @@
     export * from "./dessert.js";
     export * from "./main-course.js";
     export * from "./bill.js";
+    export * from "./product.js";
