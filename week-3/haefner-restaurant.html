@@ -45,7 +45,7 @@
 
                <div class = "card">
                   <div class= "card-title">Beverages</div>
-                  <div class = "card-content" id="beverages-card">
+                  <div class = "card-content" id="beverages">
                      <label for="soda">Soda ($3.30)
                         <input type="checkbox" id="soda" name="sodaCheck">
                      </label><br>
@@ -92,7 +92,7 @@
                <!-- Appetizers -->
                <div class = "card">
                   <div class= "card-title">Appetizers</div>
-                  <div class = "card-content" id="appetizers-card">
+                  <div class = "card-content" id="appetizers">
                      <label for="nachos">Nachos ($6.60)
                         <input type="checkbox" id="nachos" name="nachosCheck">
                      </label><br>
@@ -113,15 +113,15 @@
               <!-- Desserts -->
               <div class = "card">
                <div class= "card-title">Desserts</div>
-               <div class = "card-content" id="desserts-card">
+               <div class = "card-content" id="desserts">
                   <label for="icecream">Ice Cream ($4.30)
-                     <input type="checkbox" id="icecream" name="icecreamCheck">
+                     <input type="checkbox" id="icecream" name="icecreamCheck" value = "4.30">
                   </label><br>
                   <label for="cake">Chocolate Cake ($5.40)
-                     <input type="checkbox" id="cake" name="cakeCheck">
+                     <input type="checkbox" id="cake" name="cakeCheck" value = "5.40">
                   </label><br>      
                   <label for="pie">Apple Pie ($3.80)
-                     <input type="checkbox" id="pie" name="pieCheck">
+                     <input type="checkbox" id="pie" name="pieCheck" value = "3.80">
                   </label><br>         
                </div>
             </div>
@@ -192,15 +192,26 @@
          for (let beverage of beverages) {
 
             if (beverages.checked) {
+
              bill.addBeverage(new Beverage(beverage.name, beverage.value));
+
             }
 
+         }
+
+         for (let dessert of desserts) {
+
+            if (desserts.checked) {
+
+               bill.addDesserts(new Dessert(dessert.name, dessert.value));
+
+            }
          }
 
          //Calling the getTotal() function and assigning it to the total variable.
          let total = bill.getTotal();
 
-         //Binding results from the getTotal() function
+         //Binding results from the getTotal() function to the order-total div.
          document.getElementById('order-total').innerHTML = total;
 
 
