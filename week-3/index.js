@@ -1,4 +1,9 @@
-
+/** 
+   Title: index.js
+   Author: Alex Haefner
+   Date: 3-30-2021
+   Description: Module index.js
+*/
     export * from "./appetizer.js";
     export * from "./beverage.js";
     export * from "./dessert.js";

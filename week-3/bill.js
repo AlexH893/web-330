@@ -1,5 +1,10 @@
-//sources https://www.w3schools.com/jsref/jsref_tofixed.asp
-
+/** 
+   Title: bill.js
+   Author: Alex Haefner
+   Date: 3-30-2021
+   Description: Module bill.js
+   Sources https://www.w3schools.com/jsref/jsref_tofixed.asp
+*/
 
 import { Product } from "./product.js";
 
