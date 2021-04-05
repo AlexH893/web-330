@@ -6,7 +6,17 @@ import { Product } from "./product.js";
 
 
 export class Bill {
-     _beverages = [];  _appetizers = [];  _mainCourses = [];  _desserts = [];
+
+    //Assigning class props to an empty array.
+    constructor(_beverages, _appetizers, _mainCourses, _desserts)
+    {
+    
+        this._beverages = [];
+        this._appetizers = [];
+        this._mainCourses = [];
+        this._desserts = [];
+    }
+
 
      addBeverage(beverage) {
 
@@ -56,11 +66,11 @@ export class Bill {
         let dessertTotal = this._desserts.forEach(function(dessert) {
 
             total += parseFloat(dessert.price);
-            
+
         })
 
 
-
+        console.log(total);
         //Returning total variable and setting precision to 2 decimal places.
         return total.toFixed(2);
 
