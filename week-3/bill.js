@@ -5,7 +5,7 @@ import { Product } from "./product.js";
 
 
 
-export class bill {
+export class Bill {
      _beverages = [];  _appetizers = [];  _mainCourses = [];  _desserts = [];
 
      addBeverage(beverage) {
