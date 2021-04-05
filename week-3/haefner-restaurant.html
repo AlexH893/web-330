@@ -208,6 +208,15 @@
             }
          }
 
+         for (let appetizer of appetizers) {
+
+               if (appetizers.checked) {
+
+                  bill.addAppetizer(new Appetizer(appetizer.name, appetizer.value));
+
+               }
+         }
+
          //Calling the getTotal() function and assigning it to the total variable.
          let total = bill.getTotal();
 
