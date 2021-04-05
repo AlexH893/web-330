@@ -1,6 +1,11 @@
 //sources https://www.w3schools.com/jsref/jsref_tofixed.asp
 
-class bill {
+
+import { Product } from "./product.js";
+
+
+
+export class bill {
      _beverages = [];  _appetizers = [];  _mainCourses = [];  _desserts = [];
 
      addBeverage(beverage) {
