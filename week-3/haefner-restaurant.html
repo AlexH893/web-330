@@ -210,9 +210,11 @@
 
          }
 
-        getTotal();
-        
-                  document.getElementById('order-total').innerHTML = total;
+         //Calling the getTotal() function and assigning it to the total variable.
+         let total = bill.getTotal();
+
+         //Binding results from the getTotal() function
+         document.getElementById('order-total').innerHTML = total;
 
 
 
