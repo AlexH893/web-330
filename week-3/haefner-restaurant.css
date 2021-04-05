@@ -1,17 +1,11 @@
-.grid2x2 {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .grid2x2 > div {
-    display: flex; 
-    flex-basis: calc(50% - 40px);  
-    justify-content: center;
-    flex-direction: column;
-  }
-  .grid2x2 > div > div {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
+.card-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 3% auto 0;
+  width: 260px;
+  display: inline;
+}
