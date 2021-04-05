@@ -40,10 +40,29 @@ export class Bill {
             
             total += parseFloat(beverage.price);
 
-            //Returning total variable and setting precision to 2 decimal places.
-            return total.toFixed(2);
-
         });
+
+        let mainCourseTotal = this._mainCourses.forEach(function(mainCourse) {
+
+            total += parseFloat(mainCourse.price);
+        });
+
+        let appetizerTotal = this._appetizers.forEach(function(appetizer) {
+
+            total += parseFloat(appetizer.price);
+
+        })
+
+        let dessertTotal = this._desserts.forEach(function(dessert) {
+
+            total += parseFloat(dessert.price);
+            
+        })
+
+
+
+        //Returning total variable and setting precision to 2 decimal places.
+        return total.toFixed(2);
 
     }
 
