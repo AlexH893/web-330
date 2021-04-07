@@ -15,7 +15,7 @@
          <link rel="stylesheet" href="../theme.css" type="text/css">
          <link rel="stylesheet" href="../site.css" type="text/css">
 
-         <link rel="stylesheet" href="haefner-palindrome.css" type="text/css">
+         <link rel="stylesheet" href="calorie.css" type="text/css">
 
          <title>WEB 231 – Enterprise JavaScript I</title>
       </head>
@@ -32,7 +32,7 @@
                      <span if = "foodList"></span>                  
                   </div>
                   <div class="form-field">
-                     <button id="btnCheckPhrase" class="btn btn-primary full-width" onclick="checkForPalindrome()">Search</button>
+                     <button id="btnSearch" class="btn btn-primary full-width" onclick="checkForPalindrome()">Search</button>
                   </div>
                   </div>
                </div>
@@ -45,7 +45,10 @@
             <div id="results-container">
                <div class="card">
                   <div class="card-title">Search Results</div>
-                  <div class="card-content" id="assign-results-header"></div>
+                  <div class="card-content" id="assign-results-header">
+                     <th id = "searchResults"></th>
+                     <tbody id = "searchResults"></tbody>
+                  </div>
                   <div class="card-content" id="search-results"></div>
                </div>
                <br>
