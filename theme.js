@@ -25,9 +25,9 @@ function setDefaultTheme() {
 
 
 
-function setDefaultTheme() {
-    // Again, variables are looking at local storage to determine theme
-    const theme = localStorage.getItem("colorTheme") || "light-theme";
+function setDefaultTheme()
+{
+    const theme = localStorage.getItem("mode") || "light-theme";
     const iconMode = localStorage.getItem("iconMode") || "fa-toggle-off";
     const iconText = localStorage.getItem("iconText") || "Light Mode";
 
@@ -36,30 +36,54 @@ function setDefaultTheme() {
     document.getElementById("icon-text").innerHTML = iconText;
 }
 
+//Set the HTML body to the user's selected theme. 
+//If one has not been selected, set the theme to light-theme.
+function setSelectedTheme()
+{
+    document.body.classList.value = localStorage.getItem("mode") || "light-theme";
+}
 
-function toggleMode(x) {
-    let colorTheme = document.body.classList.value;
-    let iconMode = document.getElementById("icon-mode").classList.value;
 
-    //If body class is set to dark, switch to light
-    if (document.body.classList.value === "dark-theme") {
+function toggleMode(x)
+{
+    let colorTheme = document.body.classList; // get the body's CSS class
+    let iconMode = x.classList; // get the current classes assigned to the triggered button
 
-        document.body.classList.value = "light-theme";
-
-        document.getElementById("icon-mode").classList.remove("fa-toggle-on");
-        document.getElementById("icon-mode").classList.add("fa-toggle-off");
-        document.getElementById("icon-text").innerHTML = "Light Mode"
-        localStorage.setItem('colorTheme', 'light-theme')
-        localStorage.setItem('iconText', 'Light Mode')
-        localStorage.setItem('iconMode', 'fa-toggle-off')
-    } else {
-        // Else, if the body is set to light-theme, switch to dark
-        document.body.classList.value = "dark-theme";
-        document.getElementById("icon-mode").classList.remove("fa-toggle-off");
-        document.getElementById("icon-mode").classList.add("fa-toggle-on");
-        document.getElementById("icon-text").innerHTML = "Dark Mode"
-        localStorage.setItem('colorTheme', 'dark-theme')
-        localStorage.setItem('iconText', 'Dark Mode')
-        localStorage.setItem('iconMode', 'fa-toggle-on')
+    /**
+     * If the current body class is set to the light-theme, update the user's preference to the dark-theme in the browsers
+     * local storage.
+     */
+    if (colorTheme.value === "light-theme")
+    {
+        localStorage.clear();
+        localStorage.setItem("mode", "dark-theme");
+        localStorage.setItem("iconMode", "fa-toggle-on");
+        localStorage.setItem("iconText", "Dark Mode");
     }
+    /**
+     * If the current body class is set to the dark-theme, update the user's preference to the light-theme in the browsers
+     * local storage.
+     */
+    else
+    {
+        localStorage.clear();
+        localStorage.setItem("mode", "light-theme");
+        localStorage.setItem("iconMode", "fa-toggle-off");
+        localStorage.setItem("iconText", "Light Mode");
+    }
+
+    /**
+     * Apply the updated selection to the HTML page elements
+     */
+    colorTheme.value = localStorage.getItem("mode");
+    iconMode.value = `fa ${localStorage.getItem("iconMode")} pull-right`;
+    document.getElementById("icon-text").innerHTML = localStorage.getItem("iconText");
+}
+
+//Clear browser's storage and set default theme to light theme.
+function clearLocalStorage() {
+    localStorage.clear();
+    document.body.classList.value = "light-theme";
+    document.getElementById("icon-text").innerHTML = "Light Mode";
+    document.getElementById("icon-mode").classList.value = "fa fa-toggle-off pull-right";
 }
