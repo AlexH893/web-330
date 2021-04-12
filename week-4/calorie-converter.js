@@ -24,7 +24,7 @@
       
         static find(string) {
 
-            return newArray = this.data.filter(FoodModel.name == string);
+            return this.data.filter(toLowerCase().includes(string.toLowerCase()));
         }
 
 
