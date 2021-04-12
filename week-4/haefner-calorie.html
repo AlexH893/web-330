@@ -64,15 +64,12 @@ import {
 //Creating variable and assigning it the txtFoodItem input field.
 let txtFoodItemEl = document.getElementById('txtFoodItem').value;
 
-document.getElementById("btnSearch").addEventListener("click", myFunction);
-
-function myFunction() {
+document.getElementById("btnSearch").onclick = function () {
 
     //Assigning the variable the input value.
     let txtFoodItem = txtFoodItemEl.value;
 
-
-    let foods = CalorieConverter.find(txtFoodItem)
+    let foods = CalorieConverter.find(txtFoodItem);
 
     let tableData = "";
 
