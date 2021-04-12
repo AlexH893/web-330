@@ -47,10 +47,12 @@
                <div class="card">
                   <div class="card-title">Search Results</div>
                   <div class="card-content" id="assign-results-header">
-                     <th id = "searchResults"></th>
-                     <tbody id = "searchResults"></tbody>
-                  </div>
-                  <div class="card-content" id="search-results"></div>
+                     <table>
+                        <thead>
+                  <th>Table Name</th>
+                  <th>Calories</th>
+                  </thead>
+                  <tbody id="myTable">
                </div>
                <br>
             </div>
@@ -85,7 +87,7 @@ document.getElementById("btnSearch").onclick = function () {
                   }
         tableData += "</tbody></table>";
 
-        document.getElementById("resultsTable").innerHTML = tableData;
+        document.getElementById("myTable").innerHTML = tableData;
     }
 
     //An event listener for keyup.
