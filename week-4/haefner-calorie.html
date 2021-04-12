@@ -62,7 +62,7 @@ import {
 } from "./calorie-converter.js";
 
 //Creating variable and assigning it the txtFoodItem input field.
-let txtFoodItemEl = document.getElementById('txtFoodItem').value;
+let txtFoodItemEl = document.getElementById('txtFoodItem');
 
 document.getElementById("btnSearch").onclick = function () {
 
@@ -80,9 +80,9 @@ document.getElementById("btnSearch").onclick = function () {
                     <tr>
                         <td> ${food.name} </td>
                         <td> ${food.calories} </td>
-                    </tr>`;
+                    </tr>`
         tableData += tblRow;
-
+                  }
         tableData += "</tbody></table>";
 
         document.getElementById("resultsTable").innerHTML = tableData;
@@ -118,7 +118,7 @@ document.getElementById("btnSearch").onclick = function () {
 
 
 
-}    
+    
 	</script>
 </body>
 
