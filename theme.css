@@ -257,7 +257,7 @@ th {
 
 td,
 th {
-	border: 1px solid;
+	border: 1px solid #ddd;
 	border-color: var(--table-border-color);
 	padding: 8px;
 }
