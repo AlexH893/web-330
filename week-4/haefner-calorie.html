@@ -1,9 +1,10 @@
 <!--
    Title: haefner-calorie.html
    Author: Alex Haefner
-   Date: 4-6-2021
+   Date: 4-8-2021
    Description: Working with lambda expressions and static props.
-   Sources:
+   Sources: https://www.w3schools.com/jsref/event_onkeyup.asp
+   https://stackoverflow.com/questions/7060750/detect-the-enter-key-in-a-text-input-field
 
    -->
    <!DOCTYPE html>
@@ -32,7 +33,7 @@
                      <span if = "foodList"></span>                  
                   </div>
                   <div class="form-field">
-                     <button id="btnSearch" class="btn btn-primary full-width" onclick="checkForPalindrome()">Search</button>
+                     <button id="btnSearch" class="btn btn-primary full-width" onclick="">Search</button>
                   </div>
                   </div>
                </div>
@@ -55,8 +56,72 @@
             </div>
          </div>
         
-	<script>
+	<script type="module">
+import {
+    CalorieConverter
+} from "./calorie-converter.js";
 
+//Creating variable and assigning it the txtFoodItem input field.
+let txtFoodItemEl = document.getElementById('txtFoodItem').value;
+
+document.getElementById("btnSearch").addEventListener("click", myFunction);
+
+function myFunction() {
+
+    //Assigning the variable the input value.
+    let txtFoodItem = txtFoodItemEl.value;
+
+
+    let foods = CalorieConverter.find(txtFoodItem)
+
+    let tableData = "";
+
+    //Iterating over foods and populating an HTML table
+    for (let food of foods) {
+
+        let tblRow = `
+                    <tr>
+                        <td> ${food.name} </td>
+                        <td> ${food.calories} </td>
+                    </tr>`
+        tableData += tblRow;
+
+        tableData += "</tbody></table>";
+
+        document.getElementById("resultsTable").innerHTML = tableData;
+    }
+
+    //An event listener for keyup.
+    document.addEventListener("keyup", function(event) {
+
+        //If the user presses the enter key
+        if (e.key = 'enter') {
+
+            //Simulate clicking the search button.
+            document.getElementById("btnSearch").click();
+
+        }
+    });
+
+    //Creating variable foodList and calling static data field.
+    let foodList = CalorieConverter.data;
+
+    //Building an HTML <i> string.
+    let foodListData = "<i> (Ex: ";
+
+    for (let food of foodList) {
+        //Appending food names to variable string.
+        foodListData += `${ food.name }, `;
+    }
+
+    //
+    foodListData = `${ foodListData.slice(0,-2) })</i>`;
+
+    document.getElementById("foodList").innerHTML = foodListData;
+
+
+
+}    
 	</script>
 </body>
 

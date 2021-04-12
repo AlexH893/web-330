@@ -1,23 +1,27 @@
-/*
-https://www.w3schools.com/jsref/jsref_includes.asp
+/** 
+   Title: calorie-converter.js
+   Author: Alex Haefner
+   Date: 4-8-2021
+   Description: Populating static variable with 6 FoodModel objects.
+
 */
     import { FoodModel } from "./food-model.js";
 
     export class CalorieConverter {
 
         //Populating static variable.
-        static data = [
+        static data = [ new FoodModel(1007, "Egg", 78),
+            new FoodModel(1008, "Apple", 95),
+            new FoodModel(1009, "Hamburger", 354),
+            new FoodModel(1010, "Fries", 400),
+            new FoodModel(1011, "Banana", 105),
+            new FoodModel(1012, "Soda", 150),
 
-        Egg = {ID: 1007, Name: ID, Calories: 78},
-        Apple = {ID: 1008, Name: Apple, Calories: 95},
-        Hamburger = {ID: 1009, Name: Hamburger, Calories: 354},
-        Fries = {ID: 1010, Name: Fries, Calories: 400},
-        Banana = {ID: 1011, Name: Banana, Calories: 105},
-        Soda = {ID: 1012, Name: Soda, Calories: 150}
-
-        ];
+    
+    ]
 
 
+      
         static find(string) {
 
             return newArray = this.data.filter(FoodModel.name == string);
