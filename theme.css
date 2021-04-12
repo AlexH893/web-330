@@ -249,7 +249,7 @@ th {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
-	background-color: var(--table-header-color);
+	background-color: var(--table-header-background-colorcolor);
 	color: var(--table-header-color);
 }
 
