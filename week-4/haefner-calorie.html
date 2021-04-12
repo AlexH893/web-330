@@ -83,7 +83,7 @@ function myFunction() {
                     <tr>
                         <td> ${food.name} </td>
                         <td> ${food.calories} </td>
-                    </tr>`
+                    </tr>`;
         tableData += tblRow;
 
         tableData += "</tbody></table>";
@@ -109,7 +109,7 @@ function myFunction() {
     //Building an HTML <i> string.
     let foodListData = "<i> (Ex: ";
 
-    for (let food of foodList) {
+    for (const food of foodList) {
         //Appending food names to variable string.
         foodListData += `${ food.name }, `;
     }
