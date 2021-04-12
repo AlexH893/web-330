@@ -104,17 +104,17 @@ document.getElementById("btnSearch").onclick = function () {
     let foodList = CalorieConverter.data;
 
     //Building an HTML <i> string.
-    let foodListData = "<i> (Ex: ";
+    let foodListData = "<i>(Ex: ";
 
     for (const food of foodList) {
         //Appending food names to variable string.
-        foodListData += `${ food.name }, `;
+        foodListData += `${food.name}, `;
     }
 
     //
-    foodListData = `${ foodListData.slice(0,-2) })</i>`;
+    foodListData = `${foodListData.slice(0,-2)})</i>`;
 
-    document.getElementById("foodList").innerText = foodListData;
+    document.getElementById("foodList").innerHTML = foodListData;
 
 
 
