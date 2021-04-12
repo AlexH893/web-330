@@ -239,6 +239,7 @@ h4 {
 table {
 	border-collapse: collapse;
 	width: 100%;
+	background-color: var(--heading-background-color);
 	margin-bottom: 30px;
 }
 
@@ -261,7 +262,7 @@ th {
 	padding: 8px;
 }
 
-.table-hover > tr:hover {
+tr:hover {
 	
 	background-color: var( --table-hover-background-color);
 	color: var(--table-hover-color);
