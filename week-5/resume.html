@@ -1,36 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://use.fontawesome.com/d4276bd064.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
-</head>
-  <body>
-  <header>
-    <h1>
-        Alex Haefner
-    </h1>
-    <h3>
-        Web Developer
-    </h3>
+   <head>
+      <meta charset="UTF-8">
+      <title>title</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="https://use.fontawesome.com/d4276bd064.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   </head>
+   <div class="row">
+     <!--Navbar column-->
+      <div class="col w-25">
+         <div class="navbar navbar-inverse navbar-fixed-left">
+            <img class="navImg" src="signature.png"></img>
+            <ul class="nav navbar-nav">
+               <li><a href="#">About</a></li>
+               <li><a href="#">Resume</a></li>
+               <li><a href="#">Projects</a></li>
+               <li><a href="#">Database Diagrams</a></li>
+               <li><a href="#">API Unit Tests</a></li>
+               <li><a href="#">Bucket List</a></li>
+            </ul>
+         </div>
+      </div>
+      <!--Navbar-->
+    
+      <!--BEGIN RESUME-->
+      <div class="col w-50">
+ 
+          <div class="col">
+         <h3 id="resumeName">Alex Haefner</h3>
+         <br>
+         <a id="resumeLinks" href="https://github.com/AlexH893/">https://github.com/AlexH893/</a> | <a id="resumeLinks" href="https://www.linkedin.com/in/alexhaefner/">https://www.linkedin.com/in/alexhaefner/</a>
+         <br>
+         <p id="contactText">641-569-0353, alexhaefner@live.com</p>
+         <hr>
 
-    <div class="navbar navbar-inverse navbar-fixed-left">
-        <img src="signature.png"></img>
-        <ul class="nav navbar-nav">
+         <!--Skills section-->
+         <div class="row">
+         <div class="col w-10" style="display: inline-block;">
+         <p id ="skillsHeader">SKILLS</p>
+         </div>
+         <div class="col w-10" style="display: inline-block;">
+          <p id ="skillsList">JavaScript<br>PHP<br>C#/.NET</p>
+          </div>
+          <div class="col w-10" style="display: inline-block;">
+            <p id ="skillsList">HTML/CSS/XML<br>Selenium<br>UAT</p>
+            </div>
+        </div>
+        <!--End of skills section-->
+        <hr>
+         <!--Employment section-->
+         <div class="row">
+          <div class="col w-10" style="display: inline-block;">
+          <p id ="employmentHeader">EMPLOYMENT HISTORY</p>
+          </div>
+          <div class="col w-20" style="display: inline-block;">
+           <br>
+           </div>
+           <div class="col w-10" style="display: inline-block;">
+             </div>
+         </div>
+         <div class="col w-20">
+          <p id ="employmentName1">QA Automation Tester, Shasta QA</p><p id="employmentLocation1">Iowa City, Iowa</p>
+          </div>
+     
+      
+      </div>
+      <!--Employment1 tasks-->      
+      <ul id ="employment1tasks1">
+        <li>Performed black box regression testing on a multitude of applications</li>
+      </ul>  
+      <ul id ="employment1tasks">
+        <li>Created robust automation scripts to test components of software using Selenium and C# </li>
+        <li>Created organized testing documentation & weekly status reports</li>
+        <li>Utilized Confluence & Jira for issue tracking/documentation</li>
+      </ul> 
+      <!--End of employment tasks-->  
+      
+      
+      <div class="col w-20">
+        <p id ="employmentName1">UAT, Paragon IT</p><p id="employmentLocation1">Des Moines, Iowa/Remote</p>
+        </div>
+      <!--Employment2 tasks-->      
+      <ul id ="employment1tasks1">
+        <li>Perform user acceptance testing on Medicaid eligibility software for Iowa Department of Human Services</li>
+      </ul>  
+      <ul id ="employment1tasks">
+        <li>Write test cases to test for defects after each release</li>
+        <li>Participate in daily standup meetings</li>
+        <li>Collaborate with a small team and create a daily report of testing results & defects</li>
+      </ul> 
+      <!--End of employment tasks--> 
+      <!--End of employment--> 
+      
+      <hr>
 
-         <li><a href="#">About</a></li>
-         <li><a href="#">Resume</a></li>
-         <li><a href="#">Projects</a></li>
-         <li><a href="#">Database Diagrams</a></li>
-         <li><a href="#">API Unit Tests</a></li>
-         <li><a href="#">Bucket List</a></li>
 
-        </ul>
+
+
+
+
+
+
+
+
+      <!--END RESUME-->
+
+        
       </div>
 
-  </header>
 
 
 
@@ -42,9 +120,44 @@
 
 
 
-    <footer>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <img src="linkedin.svg" width="16px"></img>
-        </footer>
-  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col w-25" id="header">
+      </div>
+   </div>
+
+   <div class="footer">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <img src="linkedin.svg" width="16px"></img>
+   </div>
+   </body>
 </html>

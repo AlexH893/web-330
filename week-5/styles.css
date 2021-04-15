@@ -4,15 +4,17 @@
     border-radius: 0;
     height: 75%;
     /* Space between links */
-    line-height: 1.7em;
+    line-height: 1.8em;
+    
 
   }
   
   .navbar-fixed-left .navbar-nav > li {
     float: none;  /* Cancel default li float: left */
-    width: 139px;
+    width: 150px;
     padding-left: 1rem;
     font-family: PT-Serif;
+
   }
   
   .navbar-fixed-left + .container {
@@ -26,6 +28,76 @@
 
     padding: 0px 10px;
   }
+
+  
+.col #resumeName {
+  text-align: center;
+}
+
+  /**Github and linkedin links */
+ .col #resumeLinks {
+
+  display: inline-block;
+  overflow: hidden;
+  font-size: 12px;
+  }
+
+  /**Phone number and email*/
+  .col #contactText {
+
+    padding-left: 5em;
+
+  }
+
+  /** Skills header */
+  .col #skillsHeader {
+    font-size: 18px;
+  }
+
+  /**Line */
+  .col hr {
+    border: 1px solid black;
+  }
+
+  /**Skills header*/
+  .col #skillsHeader {
+
+text-align: left;
+  }
+
+  .col #employmentHeader {
+    font-size: 18px;
+  }
+
+  .col #employmentLocation1 {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 3em;
+
+    
+
+  }
+
+  .col #employmentName1 {
+    text-align: center;
+    margin-bottom: 1px;
+
+  }
+
+  .col #employment1tasks, #employment1tasks1 {
+    font-size: 12px;
+    line-height: 1.5em;
+
+  }
+
+  .col #employment1tasks1 {
+    margin-top: -2em;
+
+
+  }
+
+
+
 
   /* Image above navbar */
   .navbar img {
@@ -45,6 +117,7 @@
 
   }
 
+
   /** Text for about me */
   .col .aboutMe {
     padding-top: 2.5rem;
@@ -58,4 +131,5 @@
     width: 100%;
     text-align: center;
     padding-top: 2rem;
+    word-spacing: 1rem;
   }
