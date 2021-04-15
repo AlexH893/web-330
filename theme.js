@@ -47,7 +47,7 @@ function setSelectedTheme()
 function toggleMode(x)
 {
     let colorTheme = document.body.classList; // get the body's CSS class
-    let iconMode = x.classList; // get the current classes assigned to the triggered button
+    let iconMode = document.getElementById("icon-mode").classList.value; // get the current classes assigned to the triggered button
 
     /**
      * If the current body class is set to the light-theme, update the user's preference to the dark-theme in the browsers
