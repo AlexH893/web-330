@@ -63,9 +63,61 @@
          </div>
    <script type="javascript" src="../theme.js"></script>
 
-	<script type="module">
+<script>
 
-	</script>
+import { Product } from "./product.js";
+import { shoppingCart } from "./shopping-cart.js";
+
+//Instantiating new ShoppingCart object and assigning it to a variable named shoppingCart
+let shoppingCart = new ShoppingCart();
+
+function setCartCont() {
+
+    //Finding the cart count div
+    var element = document.getElementById('cart-count');
+
+    //Binding results of the count function to the innerHTML
+    document.getElementById(element).innerHTML = ShoppingCart.count();
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 </body>
 
 </html>
