@@ -4,4 +4,11 @@
     grid-template-columns: auto auto auto;
     padding: 10px;
     grid-gap: 20px;
+
+}
+
+.col #projects {
+
+border-bottom: chartreuse;
+
 }

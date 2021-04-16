@@ -1,50 +1,121 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Personal Portfolio Example with HTML Templates</title>
+
+    <!-- Stylesheet references -->
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://use.fontawesome.com/d4276bd064.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- JavaScript references -->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
 </head>
-  <body>
-  <header>
-    <h1>
-        Alex Haefner
-    </h1>
-    <h3>
-        Web Developer
-    </h3>
-
-    <div class="navbar navbar-inverse navbar-fixed-left">
-        <img src="signature.png"></img>
-        <ul class="nav navbar-nav">
-
-         <li><a href="#">About</a></li>
-         <li><a href="#">Resume</a></li>
-         <li><a href="#">Projects</a></li>
-         <li><a href="#">Database Diagrams</a></li>
-         <li><a href="#">API Unit Tests</a></li>
-         <li><a href="#">Bucket List</a></li>
-
+<body>
+<header-component></header-component>
+<div class="row">
+  <div class="col">
+     <div class="navbar navbar-inverse navbar-fixed-left">
+      <a href="index.html">
+        <img class="navImg" src="signature.png"style="margin-top: 2em;"></img>
+        </a>
+        <ul class="nav navbar-nav" style="margin-bottom: 20em;">
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="databasediagram.html">Database Diagrams</a></li>
+           <li><a href="apiunittests.html">API Unit Tests</a></li>
+           <li><a href="#">Bucket List</a></li>
         </ul>
-      </div>
+     </div>
+  </div>
 
-  </header>
+  <div class="col" id="projects">
+    <h1 class="app-header">Database Diagrams</h1>
+    <div class="assign-content">
+        <div class="card">
+            <div class="card-title">
+                School Projects
+            </div>
 
+            <div class="card-content" id="projects-container">
+                <div class="card">
+                    <div class="card-title">API Unit Test</div>
+                    <div class="card-content">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
 
+                <div class="card">
+                  <div class="card-title">API Unit Test</div>
+                  <div class="card-content">Landing page featuring projects
+                      created in the class WEB-330<br>
+                      https://alexh893.github.io/web-330/
+                    </div>
+                </div>
 
+                <div class="card">
+                  <div class="card-title">API Unit Test</div>
+                  <div class="card-content">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
 
+                <div class="card">
+                  <div class="card-title">API Unit Test</div>
+                  <div class="card-content">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
 
+                <div class="card">
+                  <div class="card-title">API Unit Test</div>
+                  <div class="card-content">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
 
+                <div class="card">
+                  <div class="card-title">API Unit Test</div>
+                  <div class="card-content">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
 
+                <div class="card">
+                  <div class="card-title">API Unit Test</div>
+                  <div class="card-content">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
 
+                <div class="card">
+                  <div class="card-title">API Unit Test</div>
+                  <div class="card-content">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+<div class="col"></div>
+</div>
 
-
-
-    <footer>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <img src="linkedin.svg" width="16px"></img>
-        </footer>
-  </body>
+<footer-component></footer-component>
+</body>
 </html>
