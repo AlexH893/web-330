@@ -18,7 +18,7 @@
          <title>WEB 231 – Enterprise JavaScript I</title>
       </head>
       <body class="light-theme">
-         <div id="container">
+        <div id="container">
          <div class="app-header">Welcome to Bob’s Automotive
             Repair Shop!</div>
          <div class="card">
@@ -32,30 +32,31 @@
                         <option value="19.99">Oil Change</option>
                         <option value="18.44">Filter Replacement</option>
                         <option value="9.99">Wiper Fluid Refill</option>
+                        </select>
                         <i id="cartMessage"></i>
                   </div>
                   <div class="form-field">
-                     <button id="btnSearch" class="btn btn-primary full-width" onclick="">Search</button>
+                     <button id="btnAddProduct" class="btn btn-primary full-width" onclick="">Add to Cart</button>
                   </div>
                </div>
             </div>
+         </div>
          </div>
          <!-- Link to return back to the index.html page. -->
          <a class="return-home" href="../index.html">Return</a>  
          <!--Card to display results-->
          <div id="results-container">
             <div class="card">
-               <div class="card-title">Search Results</div>
+               <div class="card-title">Shopping Cart</div>
                <div class="card-content" id="assign-results-header">
-                  <table>
-                     <!-- Begin myTable-->
-                  <thead>
-                     <th>Name</th>
-                     <th>Calories</th>
-                  </thead>
-                  <tbody id="myTable">
-                  </tbody>
-                  <!--End of myTable-->
+                <table>
+                    <!-- Begin myTable-->
+                 <thead>
+                    <th id="shoppingCart">Name</th>
+                    <td i="shoppingCart">Calories</td>
+                 </thead>
+                 </table>
+                 <!--End of myTable-->
                </div>
                <br>
             </div>
