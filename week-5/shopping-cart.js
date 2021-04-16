@@ -6,7 +6,7 @@
    Description: Class 
 */
 
-class ShoppingCart {
+export class ShoppingCart {
 
     constructor() {
         
@@ -23,6 +23,19 @@ class ShoppingCart {
 
         //Adding product object to products array
         products.push(product);
+
+    }
+
+    //Using JavaScript Iterators, create an iterator and in the body use a for…of 
+    //statement to loop over the products array. Yield return each iterated product object
+    * myIterator() {
+
+        for (let i of products) {
+            
+            yield i;
+        }
+
+
 
     }
 
