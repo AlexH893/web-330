@@ -1,5 +1,4 @@
-  
-/** 
+  /** 
    Title: cart-component.js
    Author: Alex Haefner
    Date: 4-16-2021
