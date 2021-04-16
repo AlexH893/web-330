@@ -1,0 +1,23 @@
+/** 
+   Title: haefner-bobs-auto-repair.css
+   Author: Alex Haefner
+   Date: 4-16-2021
+   Description: Styling for haefner-bobs-auto-repair.html
+*/
+
+/** Styling for the cart message */
+#cart-message {
+
+    float: right;
+    color: #df546a;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+}
+
+/** Setting the cursor to a pointer on hover */
+i:hover {
+
+    cursor: pointer;
+
+}
