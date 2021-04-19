@@ -107,11 +107,8 @@ document.getElementById("btnAddProduct").onclick = function() {
 
 function setCartCount() {
 
-    //Finding the cart count div
-    var element = document.getElementById('cart-count');
-
     //Binding results of the count function to the innerHTML
-    document.getElementById(element).innerHTML = shoppingCart.count();
+    document.getElementById('cart-count').innerHTML = shoppingCart.count();
 
 
 
