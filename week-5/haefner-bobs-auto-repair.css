@@ -16,7 +16,7 @@
 }
 
 /** Setting the cursor to a pointer on hover */
-#cartMessage:hover {
+i:hover {
 
     cursor: pointer;
 
