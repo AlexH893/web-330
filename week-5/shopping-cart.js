@@ -18,7 +18,7 @@ export class ShoppingCart {
         return this.productsArr.length;
     }
 
-    add(product) {
+    addProduct(product) {
 
         //Adding product object to products array
         productsArr.push(product);
