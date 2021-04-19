@@ -15,7 +15,7 @@ export class ShoppingCart {
 
     count() {
         //Returning length of products array
-        return products.length;
+        return this.products.length;
     }
 
     add(product) {
