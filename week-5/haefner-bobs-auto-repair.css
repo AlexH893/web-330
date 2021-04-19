@@ -24,7 +24,7 @@ i:hover {
 
 #cartIcon {
 
-    margin: 0 0;
+    margin-left: 100px;
     color: var(--card-title-color);
 
 }
