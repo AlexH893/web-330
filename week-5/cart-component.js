@@ -7,7 +7,7 @@
 
 //Extending HTMLElement ensures the custom element inherits the entire DOM API and means
 // any properties/methods that you add to the class become part of the element's DOM interface.
-class CartComponent extends HTMLElement {
+export class CartComponent extends HTMLElement {
 
     constructor(){
 
