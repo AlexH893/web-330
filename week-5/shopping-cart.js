@@ -34,10 +34,6 @@ export class ShoppingCart {
             yield i;
         }
 
- /**       for (const value of myIterator()) {
-            console.log(value);
-        }
-*/ 
     }
 
 
