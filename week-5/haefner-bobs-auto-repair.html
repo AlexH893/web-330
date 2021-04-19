@@ -23,6 +23,7 @@
             Repair Shop!</div>
          <div class="card">
             <div class="card-title">Product Listing</div>
+            <cart-component></cart-component>
             <div class="card-content">
                <div class="form">
                   <div class="form-field">
@@ -33,7 +34,7 @@
                         <option value="18.44">Filter Replacement</option>
                         <option value="9.99">Wiper Fluid Refill</option>
                         </select>
-                        <i id="cartMessage"></i>
+                        <i id="cartMessage">To view your shopping cart click on the cart icon</i>
                   </div>
                   <div class="form-field">
                      <button id="btnAddProduct" class="btn btn-primary full-width" onclick="">Add to Cart</button>
@@ -88,7 +89,7 @@ document.getElementById("btnAddProduct").onclick = function() {
     //Assigning a variable to the value of the selected option
     let productValue = productList.options[productList.selectedIndex].value;
 
-   if (product !== "select") {
+   if (product != "--Select--") {
 
       //calling the ShoppingCart add function and pass-in a new product object using the
       //product and productValue variables and arguments
