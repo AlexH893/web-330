@@ -7,21 +7,21 @@
 
 export class ShoppingCart {
 
-    constructor(productsArr) {
+    constructor(product_) {
         
-        this.productsArr = [];
+        this.product_ = [];
     }
 
 
     count() {
         //Returning length of products array
-        return this.productsArr.length;
+        return this.product_.length;
     }
 
     addProduct(product) {
 
         //Adding product object to products array
-        productsArr.push(product);
+        this.product_.push(product);
 
     }
 
@@ -29,7 +29,7 @@ export class ShoppingCart {
     //statement to loop over the products array. Yield return each iterated product object
     * myIterator() {
 
-        for (let i of productsArr) {
+        for (let i of this.product_) {
             
             yield i;
             //yield *products
