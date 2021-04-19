@@ -21,3 +21,10 @@ i:hover {
     cursor: pointer;
 
 }
+
+#cartIcon {
+
+    margin: 0;
+    color: var(--card-title-color);
+
+}
