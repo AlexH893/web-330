@@ -1,5 +1,4 @@
-  
-/** 
+  /** 
    Title: shopping-cart.js
    Author: Alex Haefner
    Date: 4-16-2021
@@ -33,9 +32,12 @@ export class ShoppingCart {
         for (let i of products) {
             
             yield i;
+            //yield *products
         }
 
-
+        for (const value of myIterator()) {
+            console.log(value);
+        }
 
     }
 

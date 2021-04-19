@@ -63,15 +63,49 @@
          </div>
    <script type="javascript" src="../theme.js"></script>
 
-<script>
+<script type="module">
 
+//Imports from script files
 import { Product } from "./product.js";
-import { shoppingCart } from "./shopping-cart.js";
+import { ShoppingCart } from "./shopping-cart.js";
+import { CartComponent } from "./cart-component.js";
 
 //Instantiating new ShoppingCart object and assigning it to a variable named shoppingCart
 let shoppingCart = new ShoppingCart();
 
-function setCartCont() {
+//Calling the setCartCount function
+setCartCount();
+
+//Executes when button is clicked
+document.getElementById("btnAddProduct").onclick = function() {
+
+    //Creating a variable named productList and assign it the productList div
+    let productList = document.getElementById("productList");
+
+    //Assigning a variable to the text of the selected option
+    let product = productList.options[productList.selectedIndex].text;
+
+    //Assigning a variable to the value of the selected option
+    let productValue = productList.options[productList.selectedIndex].value;
+
+   if (product !== "select") {
+
+      //calling the ShoppingCart add function and pass-in a new product object using the
+      //product and productValue variables and arguments
+      ShoppingCart.addProduct(product, productValue);
+
+      setCartCount();
+
+      alert("<product> was added to your shopping cart!");
+
+   }
+
+
+}
+
+
+
+function setCartCount() {
 
     //Finding the cart count div
     var element = document.getElementById('cart-count');
@@ -83,8 +117,15 @@ function setCartCont() {
 
 }
 
+//The event that runs when the user clicks the cart icon
+document.getElementById("cartIcon").onclick = function()  {
+
+   // Creating variable cartDisplayTable and assigning it the string value with the 
+   //header of table
+   let cartDisplayTable = "<th>ID</th> <th>Name</th> <th>Price</th>";
 
 
+}
 
 
 
