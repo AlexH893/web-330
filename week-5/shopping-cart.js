@@ -32,13 +32,12 @@ export class ShoppingCart {
         for (let i of this.product_) {
             
             yield i;
-            //yield *products
         }
 
-        for (const value of myIterator()) {
+ /**       for (const value of myIterator()) {
             console.log(value);
         }
-
+*/ 
     }
 
 
