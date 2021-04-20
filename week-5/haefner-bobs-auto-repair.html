@@ -72,11 +72,16 @@
 
 
 <script type="module">
-
 //Imports from script files
-import { Product } from "./product.js";
-import { ShoppingCart } from "./shopping-cart.js";
-import { CartComponent } from "./cart-component.js";
+import {
+    Product
+} from "./product.js";
+import {
+    ShoppingCart
+} from "./shopping-cart.js";
+import {
+    CartComponent
+} from "./cart-component.js";
 
 //Instantiating new ShoppingCart object and assigning it to a variable named shoppingCart
 let shoppingCart = new ShoppingCart();
@@ -96,15 +101,17 @@ document.getElementById("btnAddProduct").onclick = function() {
     //Assigning a variable to the value of the selected option
     let productValue = productList.options[productList.selectedIndex].value;
 
-   if (product != "--Select--") {
+    if (product != "--Select--") {
 
-      //calling the ShoppingCart add function and pass-in a new product object using the
-      //product and productValue variables and arguments
-      shoppingCart.addProduct(product, productValue);
-      setCartCount();
-      alert(`${product} was added to your shopping cart!`);
+        //calling the ShoppingCart add function and pass-in a new product object using the
+        //product and productValue variables and arguments
+        shoppingCart.addProduct(product, productValue);
 
-   }
+        setCartCount();
+        
+        alert(`${product} was added to your shopping cart!`);
+
+    }
 }
 
 
@@ -115,23 +122,23 @@ function setCartCount() {
 
 
 //The event that runs when the user clicks the cart icon
-document.getElementById("cartIcon").onclick = function()  {
+document.getElementById("cartIcon").onclick = function() {
 
-      // Creating variable cartDisplayTable 
-      let cartDisplayTable = document.querySelector("#shopping-table tbody");
+    // Creating variable cartDisplayTable 
+    let cartDisplayTable = document.querySelector("#shopping-table tbody");
 
-   let rows = "";
+    let rows = "";
 
 
 
-   for (let product of shoppingCart) {
+    for (let product of shoppingCart) {
 
-   rows += ` <tr> <td>${product.id}</td> <td>${product.name}</td> <td>${product.price}</td> </tr> `;
+        rows += ` <tr> <td>${product.id}</td> <td>${product.name}</td> <td>${product.price}</td> </tr> `;
+    }
+
+    //Changing the HTML content
+    cartDisplayTable.innerHTML = rows;
 }
-
-        //Changing the HTML content
-        cartDisplayTable.innerHTML = rows;
-        }
 </script>
 </body>
 </html>
