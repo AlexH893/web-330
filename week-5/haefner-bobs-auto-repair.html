@@ -3,7 +3,6 @@
    Author: Alex Haefner
    Date: 4-15-2021
    Description: 
-
    -->
    <!DOCTYPE html>
    <html lang='en'>
@@ -14,7 +13,6 @@
          <link rel="stylesheet" href="../theme.css" type="text/css">
          <link rel="stylesheet" href="../site.css" type="text/css">
          <link rel="stylesheet" href="haefner-bobs-auto-repair.css" type="text/css">
-
          <script src="https://use.fontawesome.com/d4276bd064.js"></script>
          <title>WEB 231 – Enterprise JavaScript I</title>
       </head>
@@ -51,110 +49,57 @@
             <div class="card">
                <div class="card-title">Shopping Cart</div>
                <div class="card-content" id="assign-results-header">
+                <table>
 
                     <!-- Begin myTable-->
-                    <div class="table" id="shopping-table"> 
-                     <table>
-                         <thead>
-                             <tr>
-                                 <th>ID</th>
-                                 <th>Name</th>
-                                 <th>Price</th>
-                             </tr>
-                         </thead>
-                         <tbody></tbody>
-                     </table>
-                 </div>
+                 <thead>
+                    <th id="shoppingCart">Name</th>
+                    <td i="shoppingCart">Calories</td>
+                 </thead>
+                 </table>
+                    <table id="shoppingCart"></table>
 
                  <!--End of myTable-->
                </div>
                <br>
             </div>
          </div>
-         </body>
    <script type="javascript" src="../theme.js"></script>
-
 <script type="module">
-
 //Imports from script files
 import { Product } from "./product.js";
 import { ShoppingCart } from "./shopping-cart.js";
 import { CartComponent } from "./cart-component.js";
-
 //Instantiating new ShoppingCart object and assigning it to a variable named shoppingCart
 let shoppingCart = new ShoppingCart();
-
 //Calling the setCartCount function
 setCartCount();
-
 //Executes when button is clicked
 document.getElementById("btnAddProduct").onclick = function() {
-
     //Creating a variable named productList and assign it the productList div
     let productList = document.getElementById("productList");
-
     //Assigning a variable to the text of the selected option
     let product = productList.options[productList.selectedIndex].text;
-
     //Assigning a variable to the value of the selected option
     let productValue = productList.options[productList.selectedIndex].value;
-
    if (product != "--Select--") {
-
       //calling the ShoppingCart add function and pass-in a new product object using the
       //product and productValue variables and arguments
       shoppingCart.addProduct(product, productValue);
-
       setCartCount();
-
       alert(`${product} was added to your shopping cart!`);
-
    }
-
-
 }
-
-
-
 function setCartCount() {
-
     //Binding results of the count function to the innerHTML
     document.getElementById('cart-count').innerHTML = shoppingCart.count();
-
-
-
 }
-
 //The event that runs when the user clicks the cart icon
 document.getElementById("cartIcon").onclick = function()  {
-
    // Creating variable cartDisplayTable and assigning it the string value with the 
    //header of table
-   alert("test");
-
-   let rows = "";
-   let cartDisplayTable = document.getElementById("#shopping-table tbody");
-
-        for (let i of shoppingCart) {
-            
-         rows = rows + ` <tr> <td>${product.id}</td> <td>${product.name}</td> <td>${product.price}</td> </tr> `;
-        }
-
-        //Changing the HTML content
-        cartDisplayTable.innerHTML = rows;
+   let cartDisplayTable = "<th>ID</th> <th>Name</th> <th>Price</th>";
 }
-
-
-
-
-
-
-
-
-
-
-
 </script>
 </body>
-
 </html>
