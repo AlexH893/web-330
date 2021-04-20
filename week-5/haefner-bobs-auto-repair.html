@@ -96,7 +96,7 @@ document.getElementById("btnAddProduct").onclick = function() {
 
     //Assigning a variable to the value of the selected option
     let productValue = productList.options[productList.selectedIndex].value;
-    
+
    if (product != "--Select--") {
 
       //calling the ShoppingCart add function and pass-in a new product object using the
@@ -118,10 +118,12 @@ function setCartCount() {
 //The event that runs when the user clicks the cart icon
 document.getElementById("cartIcon").onclick = function()  {
 
+      // Creating variable cartDisplayTable 
+      let cartDisplayTable = document.querySelector("#shopping-table tbody");
+      
    let rows = "";
 
-   // Creating variable cartDisplayTable 
-   let cartDisplayTable = document.querySelector("#shopping-table tbody");
+
 
    for (let product of shoppingCart) {
 
