@@ -108,7 +108,7 @@ document.getElementById("cartIcon").onclick = function()  {
    let rows = "";
    let cartDisplayTable = document.getElementById("#shopping-table tbody");
 
-   for (let i of shoppingCart) {
+   for (let product of shoppingCart) {
 
    rows = rows + ` <tr> <td>${product.id}</td> <td>${product.name}</td> <td>${product.price}</td> </tr> `;
 }
