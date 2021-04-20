@@ -119,9 +119,13 @@ document.getElementById("cartIcon").onclick = function()  {
    // Creating variable cartDisplayTable and assigning it the string value with the 
    //header of table
    alert("test");
+
    let cartDisplayTable = "<th>ID</th> <th>Name</th> <th>Price</th>";
 
-
+        for (let i of this.product_) {
+            
+            yield i;
+        }
 }
 
 
