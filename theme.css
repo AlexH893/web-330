@@ -250,6 +250,9 @@ h4 {
     padding-top: 12px;
 	padding-left: 6px;
     padding-bottom: 12px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
 	background-color: var(--table-header-background-color);
     text-align: left;
     color:var(--table-header-color); 
