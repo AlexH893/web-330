@@ -27,7 +27,7 @@ export class ShoppingCart {
 
     //Using JavaScript Iterators, create an iterator and in the body use a for…of 
     //statement to loop over the products array. Yield return each iterated product object
-    * myIterator() {
+    *[Symbol.iterator]() {
 
         for (let i of this.products) {
             
