@@ -106,7 +106,7 @@ function setCartCount() {
 document.getElementById("cartIcon").onclick = function()  {
    // Creating variable cartDisplayTable 
    let rows = "";
-   let cartDisplayTable = document.getElementById("#shopping-table tbody");
+   let cartDisplayTable = document.querySelector("#shopping-table tbody");
 
    for (let product of shoppingCart) {
 
