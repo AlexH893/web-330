@@ -52,20 +52,28 @@
                 <table>
 
                     <!-- Begin myTable-->
-                 <thead>
-                    <th id="shoppingCart">Name</th>
-                    <td i="shoppingCart">Calories</td>
-                 </thead>
-                 </table>
-                    <table id="shoppingCart"></table>
-
+                    <div class="table" id="shopping-table"> 
+                     <table>
+                         <thead>
+                             <tr>
+                                 <th>ID</th>
+                                 <th>Name</th>
+                                 <th>Price</th>
+                             </tr>
+                         </thead>
+                         <tbody></tbody>
+                     </table>
+                 </div>
                  <!--End of myTable-->
                </div>
                <br>
             </div>
          </div>
    <script type="javascript" src="../theme.js"></script>
+
+
 <script type="module">
+
 //Imports from script files
 import { Product } from "./product.js";
 import { ShoppingCart } from "./shopping-cart.js";
@@ -96,9 +104,17 @@ function setCartCount() {
 }
 //The event that runs when the user clicks the cart icon
 document.getElementById("cartIcon").onclick = function()  {
-   // Creating variable cartDisplayTable and assigning it the string value with the 
-   //header of table
-   let cartDisplayTable = "<th>ID</th> <th>Name</th> <th>Price</th>";
+   // Creating variable cartDisplayTable 
+   let rows = "";
+   let cartDisplayTable = document.getElementById("#shopping-table tbody");
+
+   for (let i of shoppingCart) {
+
+   rows = rows + ` <tr> <td>${product.id}</td> <td>${product.name}</td> <td>${product.price}</td> </tr> `;
+}
+
+        //Changing the HTML content
+        cartDisplayTable.innerHTML = rows;
 }
 </script>
 </body>
