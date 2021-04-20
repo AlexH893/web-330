@@ -246,11 +246,14 @@ h4 {
 /* Styling for table headers */
 
 .table th {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: left;
+    border: 1px solid #ddd;
+    padding-top: 12px;
+	padding-left: 6px;
+    padding-bottom: 12px;
 	background-color: var(--table-header-background-color);
-	color: var(--table-header-color);
+    text-align: left;
+    color:var(--table-header-color); 
+
 }
 
 /* Styling for table data & header */
