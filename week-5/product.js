@@ -15,8 +15,7 @@ export class Product {
 
         //Add a new property for id
 
-        this.id = Math.random().toString(16).slice(2);
-
+        this.id = Math.random().toString(16).slice(2); 
     }
 
 }
