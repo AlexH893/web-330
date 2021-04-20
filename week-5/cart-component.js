@@ -18,10 +18,7 @@ export class CartComponent extends HTMLElement {
 
     connectedCallback() {
 
-        this.innerHTML = 
-        `<i class = "fa fa-shopping-cart" id = "cartIcon">
-        </i> (<span id = "cart-count"></span>)`
-        ;
+        ` <i id="cartIcon" class="fa fa-shopping-cart"> </i> (<span id="cart-count"></span>) `;
     }
 
 }
