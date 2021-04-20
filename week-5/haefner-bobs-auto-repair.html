@@ -131,12 +131,16 @@ document.getElementById("cartIcon").onclick = function()  {
    //header of table
    alert("test");
 
-   let cartDisplayTable = "<th>ID</th> <th>Name</th> <th>Price</th>";
+   let rows = "";
+   let cartDisplayTable = document.getElementById("#shopping-table tbody");
 
-        for (let i of this.product_) {
+        for (let i of shoppingCart) {
             
-            yield i;
+         rows = rows + ` <tr> <td>${product.id}</td> <td>${product.name}</td> <td>${product.price}</td> </tr> `;
         }
+
+        //Changing the HTML content
+        cartDisplayTable.innerHTML = rows;
 }
 
 
