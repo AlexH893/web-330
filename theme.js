@@ -23,19 +23,6 @@ function setDefaultTheme() {
 }
 
 
-
-
-function setDefaultTheme()
-{
-    const theme = localStorage.getItem("mode") || "light-theme";
-    const iconMode = localStorage.getItem("iconMode") || "fa-toggle-off";
-    const iconText = localStorage.getItem("iconText") || "Light Mode";
-
-    document.body.classList.value = theme;
-    document.getElementById("icon-mode").classList.add(iconMode);
-    document.getElementById("icon-text").innerHTML = iconText;
-}
-
 //Set the HTML body to the user's selected theme. 
 //If one has not been selected, set the theme to light-theme.
 function setSelectedTheme()
@@ -44,9 +31,9 @@ function setSelectedTheme()
 }
 
 
-function toggleMode(x)
-{
-    let colorTheme = document.body.classList; // get the body's CSS class
+function toggleMode(x) {
+
+    let colorTheme = document.body.classList.value; // get the body's CSS class
     let iconMode = document.getElementById("icon-mode").classList.value; // get the current classes assigned to the triggered button
 
     /**
