@@ -31,10 +31,10 @@ function setSelectedTheme()
 }
 
 
-function toggleMode(x) {
-
-    let colorTheme = document.body.classList.value; // get the body's CSS class
-    let iconMode = document.getElementById("icon-mode").classList.value; // get the current classes assigned to the triggered button
+function toggleMode(x)
+{
+    let colorTheme = document.body.classList;
+    let iconMode = x.classList; 
 
     /**
      * If the current body class is set to the light-theme, update the user's preference to the dark-theme in the browsers
@@ -67,10 +67,11 @@ function toggleMode(x) {
     document.getElementById("icon-text").innerHTML = localStorage.getItem("iconText");
 }
 
+/*
 //Clear browser's storage and set default theme to light theme.
 function clearLocalStorage() {
     localStorage.clear();
     document.body.classList.value = "light-theme";
     document.getElementById("icon-text").innerHTML = "Light Mode";
     document.getElementById("icon-mode").classList.value = "fa fa-toggle-off pull-right";
-}
+}*/
