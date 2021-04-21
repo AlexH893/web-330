@@ -23,11 +23,6 @@ body {
 	margin-right: 100px;
 }
 
-a {
-	color: #453674;
-	text-decoration: none;
-}
-
 
 /* When a user hovers over a link, it will change to the color specified below. */
 
@@ -36,12 +31,6 @@ a:hover {
 	color: #4F3674;
 }
 
-
-/* This will change colors to indicate that it's been previously visited. */
-
-a:visited {
-	color: #3C275A;
-}
 
 #icon-mode:hover {
 	cursor: pointer;
