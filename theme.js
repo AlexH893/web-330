@@ -25,10 +25,10 @@ function setDefaultTheme() {
 
 //Set the HTML body to the user's selected theme. 
 //If one has not been selected, set the theme to light-theme.
-function setSelectedTheme()
+/*function setSelectedTheme()
 {
     document.body.classList.value = localStorage.getItem("mode") || "light-theme";
-}
+}*/
 
 
 function toggleMode(x)
@@ -57,6 +57,7 @@ function toggleMode(x)
         localStorage.setItem("mode", "light-theme");
         localStorage.setItem("iconMode", "fa-toggle-off");
         localStorage.setItem("iconText", "Light Mode");
+
     }
 
     /**
