@@ -8,7 +8,6 @@
 
 export class FloatMaxField {
 
-
     constructor(name, field, max) {
         
         this.name = name;
