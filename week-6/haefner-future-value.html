@@ -120,7 +120,7 @@ let years = document.getElementById("listNumOfYears").value;
 let errorLogEl = document.getElementById("errorLog");
 
 //Instantiating a new validator class w/values, and assigning that to variable monthlyPaymentValidator
-let monthlyPaymentValidator = new Validator("Monthly Payment", monthlyPayment);
+let monthlyPaymentValidator = new validator("Monthly Payment", monthlyPayment);
 
 //Calling addRequiredField() function on the rateValidator to make the field a required field.
 rateValidator.addRequiredField();
