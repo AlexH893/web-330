@@ -157,7 +157,7 @@ for (let msg of rateValidator.messages)
    }
 }
 
-if (monthlyPaymentValidator.validate() & rateValidator.validate()) {
+if (monthlyPaymentValidator.validate() && rateValidator.validate()) {
 
    //Clearing error log 
    errorLogEl.innerHTML = "";
@@ -169,7 +169,7 @@ if (monthlyPaymentValidator.validate() & rateValidator.validate()) {
    let formattedCurrency = FinanceCalculator.convertToCurrency(futureValue);
 
    document.getElementById("futureValue").innerHTML = "The future value is " + formattedCurrency;
-   console.log("The future value is " + formattedCurrency);
+   alert(formattedCurrency);
 //If false
 } else {
 
