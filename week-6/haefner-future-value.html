@@ -122,8 +122,19 @@ let errorLogEl = document.getElementById("errorLog");
 //Instantiating a new validator class w/values, and assigning that to variable monthlyPaymentValidator
 let monthlyPaymentValidator = new Validator("Monthly Payment", monthlyPayment);
 
+//Calling addRequiredField() function on the rateValidator to make the field a required field.
+rateValidator.addRequiredField();
 
+//Calling the addRequiredFloatField() function on the rateValidator to make the 
+//field a required float field
+rateValidator.addRequiredFloatField();
 
+//Call the addFloatMaxField() function on the rateValidator and supply it a value of 
+//100 to make the fields maximum value 100
+rateValidator.addFloatMaxField(100);
+
+//Creating variable and assigning it an empty array
+let errorLog = [];
 
 
 
