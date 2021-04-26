@@ -16,7 +16,7 @@ export class FinanceCalculator {
 
         //Create a variable named month and assign it the parameter years times the property
         //MONTHS_IN_YEAR.
-        let month = years * MONTHS_IN_YEAR;
+        let month = years * FinanceCalculator.MONTHS_IN_YEAR;
 
         //Creating a variable named interestRate and assign it a calculation
         let interestRate = 1 + rate / 100;

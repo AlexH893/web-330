@@ -1,0 +1,23 @@
+/** 
+   Title: haefner-future-value.css
+   Author: Alex Haefner
+   Date: 4-21-2021
+   Description: Styling for haefner-future-value.html
+*/
+
+.danger {
+
+    float: right;
+    color: #df546a;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+}
+
+
+.form-label {
+
+    display: inline-block;
+    padding-top: 1rem;
+
+}

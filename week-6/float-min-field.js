@@ -34,7 +34,7 @@ export class FloatMinField {
 
     getMessage() {
 
-        return "<name> must be more than <min>. You entered <field>";
+        return this.name + " should be more than " + this.min + ". You entered " + this.field
 
     }
 

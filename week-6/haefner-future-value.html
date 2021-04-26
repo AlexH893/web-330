@@ -1,0 +1,137 @@
+<!--
+   Title: haefner-future-value.html
+   Author: Alex Haefner
+   Date: 4-15-2021
+   Description: 
+   -->
+   <!DOCTYPE html>
+   <html lang='en'>
+      <head>
+         <meta charset="UTF-8">
+         <link rel="preconnect" href="https://fonts.gstatic.com">
+         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="../theme.css" type="text/css">
+         <link rel="stylesheet" href="../site.css" type="text/css">
+         <link rel="stylesheet" href="haefner-future-value.css" type="text/css">
+         <script src="https://use.fontawesome.com/d4276bd064.js"></script>
+         <title>WEB 231 – Enterprise JavaScript I</title>
+      </head>
+      <body class="light-theme">
+         <div id="container">
+            <div class="app-header">Welcome to the Future Value App!
+            </div>
+            <div class="card">
+               <div class="card-title">Future Value Calculator</div>
+               <cart-component></cart-component>
+               <div class="card-content">
+
+                  <!--Empty row-->
+                  <div class="row">
+                     <div id="errorLog" class="col-12 danger"></div>
+                 </div>
+
+                  <div class="form">
+                     <div class="row">
+                        <div class="col-5 form-field">Monthly Payment:</div>
+                        <input class="col-7 input form-field form-label" id="txtMonthlyPayment" type="text">
+                    </div>
+
+                    <div class="row">
+                     <div class="col-5 form-field">Interest Rate:</div>
+                     <input class="col-7 input form-field form-label" id="txtYearlyRate" type="text">
+                 </div>
+
+
+                 <div class="row">
+                  <div class="col-12 danger-right" id="">Enter 11% as 11.1:</div>
+              </div>
+
+
+              <div class="row">
+               <div class="col-5 form-field">Number of Years:</div>
+                  </div>
+                  <select class="col-7 drop-down-menu" id="listNumOfYears">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                 </select>
+             </div>
+
+             <div class="row">
+               <div class=" form-field">
+                   <button class="btn btn-primary full-width" id="btnCalculate">Calculate</button>
+                  </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+         <!-- Link to return back to the index.html page. -->
+         <a class="return-home" href="../index.html">Return</a>  
+         <!--Card to display results-->
+
+
+         <div class="card">
+
+            <div class="card-title">Calculation as of <span id="today"></span></div>
+
+            <div id="futureValue" class="assign-results-text card-content">
+
+            </div>
+        </div>
+
+
+
+
+
+<script type="javascript" src="../theme.js"></script>
+<script type="module">
+
+//Imports from script files
+import { FinanceCalculator } from "./finance-calculator.js";
+import { Validator } from "./validator.js";
+
+//Set the innerHTML to a new JavaScript date object
+document.getElementById("today").innerHTML = new Date().toLocaleDateString("en-US");
+
+//Executes when button is clicked
+document.getElementById("btnCalculate").onclick = function() {
+
+
+alert('test');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+</script>
+</body>
+</html>
