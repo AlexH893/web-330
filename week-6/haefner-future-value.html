@@ -169,13 +169,13 @@ if (monthlyPaymentValidator.validate() & rateValidator.validate()) {
    let formattedCurrency = FinanceCalculator.convertToCurrency(futureValue);
 
    document.getElementById("futureValue").innerHTML = "The future value is " + formattedCurrency;
-
+   console.log("The future value is " + formattedCurrency);
 //If false
 } else {
 
    //Clearing error log 
    errorLogEl.innerHTML = "";
-   let errorLogMessage = '';
+   let errorLogMessage = "<ul>"
    for (let message of errorLog) {
       errorLogMessage += "<li>" + message + "</li>";
    } 
