@@ -164,15 +164,21 @@ if (monthlyPaymentValidator.validate() & rateValidator.validate()) {
    //of the FinanceCalculator supplying it with the variables monthlyRate, rate, and years. 
    let futureValue = FinanceCalculator.calculateFutureValue(monthlyPayment, years, rate);
 
-   
+   let formattedCurrency = FinanceCalculator.convertToCurrency(futureValue);
 
+   document.getElementById("futureValue").innerHTML = "The future value is " + formattedCurrency;
 
+//If false
+} else {
 
+   //Clearing error log 
+   errorLogEl.innerHTML = "";
 
-
-
-
-
+   for (let message of errorLog) {
+      errorLogMessage += "<li>" + message + "</li>";
+   } 
+   errorLogMessage += "</ul>";
+   errorLogEl.innerHTML = errorLogMessage;    
 
 }
 
