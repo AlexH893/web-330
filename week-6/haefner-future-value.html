@@ -136,10 +136,35 @@ rateValidator.addFloatMaxField(100);
 //Creating variable and assigning it an empty array
 let errorLog = [];
 
+//Calling the monthlyValidator.validate() function, if the response is false, use a for/of
+//loop to iterate over the message fields and push each message to the errorLog variable
+if (!monthlyPaymentValidator.validate()) {
 
+   for (let msg of monthlyPaymentValidator.messages)
+   {
+      errorLog.push(msg);
+   }
+}
 
+//Same thing as above, but with rateValidator
+if (!rateValidator.validate()) {
 
+for (let msg of rateValidator.messages)
+   {
+      errorLog.push(msg);
+   }
+}
 
+if (monthlyPaymentValidator.validate() & rateValidator.validate()) {
+
+   //Clearing error log 
+   errorLogEl.innerHTML = "";
+
+   //Creating a variable named futureValue and calling the static calculateFutureValue off 
+   //of the FinanceCalculator supplying it with the variables monthlyRate, rate, and years. 
+   let futureValue = FinanceCalculator.calculateFutureValue(monthlyPayment, years, rate);
+
+   
 
 
 
@@ -150,6 +175,12 @@ let errorLog = [];
 
 
 }
+
+
+
+
+
+} //End of button event
 
 </script>
 </body>
