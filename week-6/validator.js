@@ -1,3 +1,10 @@
+/** 
+   Title: validator.js
+   Author: Alex Haefner
+   Date: 4-23-2021
+   Description: Validator class with functions
+
+*/
 import { RequiredField, RequiredField } from "./required-field.js";
 import { FloatField } from "./float-field.js";
 import { FloatMinField } from "./float-min-field.js";
@@ -46,15 +53,20 @@ class validator {
 
     validate() {
 
-
+        //Iterating over the validators array
         for (let i of this.validators) {
 
-            RequiredField.validate();
+            //If false, push the iterated objects getMessage() function to the class
+            //properties message array
+            if(!i.validate()) {
+
+                this.messages.push(i.getMessage());
+
+            }
+
+         return this.messages.length == 0;          
 
         }
-
-
-
 
     }
 }
