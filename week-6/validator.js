@@ -10,7 +10,7 @@ import { FloatField } from "./float-field.js";
 import { FloatMinField } from "./float-min-field.js";
 import { FloatMaxField } from "./float-max-field.js";
 
-class validator {   
+export class validator {   
     validators = [];
     messages = [];
 
