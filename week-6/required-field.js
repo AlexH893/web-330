@@ -17,7 +17,7 @@ export class RequiredField {
 
         validate() {
 
-            //Will return true if this.field is a string value, false if not
+            //Will return true if this.field is a string value
             let valid =  Boolean(this.field)
             if (valid){
                 valid = Boolean(this.field.trim());
