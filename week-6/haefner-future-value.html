@@ -175,7 +175,7 @@ if (monthlyPaymentValidator.validate() & rateValidator.validate()) {
 
    //Clearing error log 
    errorLogEl.innerHTML = "";
-
+   let errorLogMessage = '';
    for (let message of errorLog) {
       errorLogMessage += "<li>" + message + "</li>";
    } 
