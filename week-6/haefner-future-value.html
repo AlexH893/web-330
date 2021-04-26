@@ -113,12 +113,14 @@ console.log(`Monthly payment amount is $${monthlyPayment}`);
 
 //Creating a variable rate and assigning it the value from txtYearlyRate input field
 let rate = document.getElementById("txtYearlyRate").value;
-console.log(`Years of payment is ${years}`);
+console.log(`Interest rate is ${rate}%`); 
 
 //Creating a variable named years and assigning it value from listNumOfYears select
 let years = document.getElementById("listNumOfYears").value;
+console.log(`Years of payment is ${years}`);
 
 //Creating a variable named errorLogEl and assigning it the element errorLog
+let errorLogEl = document.getElementById("errorLog");
 let errorLogEl = document.getElementById("errorLog");
 
 
