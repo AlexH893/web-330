@@ -16,15 +16,9 @@ export class FloatField {
 
     validate() {
 
-        //Returning true if the value can be parse floated, false if not
-        if (!isNaN(this.name) && this.name.toString().indexOf('.') != -1)
-        {
-            alert('this is a numeric value and I\'m sure it is a float.');
-            return true;
-        }​ else {
 
-            return false;
-        }
+        let result = parseFloat( this.field );
+        return !isNaN(result);
 
 
     }
