@@ -3,6 +3,8 @@
    Author: Alex Haefner
    Date: 4-28-2021
    Description: whatabook
+   Sources: https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
+            https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
    -->
    <!DOCTYPE html>
    <html lang='en'>
@@ -44,7 +46,7 @@
 
          <div class="card">
 
-            <div class="card-title">Selected Book<span id="selectedBook"></span></div>
+            <div class="card-title">Selected Book<span id="selectedBookTitle"></span></div>
 
             <div class="card-content" id="selectedBook" class="assign-results-text card-content">
 
@@ -55,6 +57,61 @@
 
 <script type="javascript" src="../theme.js"></script>
 <script type="module">
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+    alert('Content loaded successfully.'); //Testing contentLoaded event
+
+    //Creating a variable fileName and assign it the string value of the books.xml document
+    let fileName = 'books.xml';
+
+    //Using JavaScript's fetch API
+    fetch(fileName) 
+    .then(res => res.text())
+    .then(data => {
+
+        //Creating variable domParser, instantiating new DOMParser object
+        //and assigning it to the variable
+        let domParser = new DOMParser();
+
+
+        let xmlBooks = domParser.parseFromString(data, "text/xml");
+
+        //Passing in the xmlBooks var
+        loadBooks(xmlBooks);
+
+
+        addIsbnClickEvents();
+
+    })
+
+
+
+
+
+});
+
+
+
+
+function loadBooks() {
+
+    //let books = 
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>
