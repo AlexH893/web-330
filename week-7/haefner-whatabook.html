@@ -99,8 +99,7 @@ function loadBooks() {
 
         let books = xml.getElementsByTagName('book').text;
 
-        tableData += `<tr><td data-value="ISBN"><a href = "#" class="isbn-link">${isbn}</a></td><td data-value = "Title">${title}</td><td data-value = "Description">${desc}</td><td data-value = "Pages">${pages}</td><td data-value = "Authors">${auths}</td></tr>`;
-
+    //tableData
 
         for (let book of books) {
 
@@ -110,16 +109,41 @@ function loadBooks() {
             let pages = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;
             let auths = book.getElementsByTagName("authors")[0].childNodes[0].nodeValue;
 
-
-
-
+            tableData += `<tr><td data-value="ISBN"><a href = "#" class="isbn-link">${isbn}</a></td><td data-value = "Title">${title}</td><td data-value = "Description">${desc}</td><td data-value = "Pages">${pages}</td><td data-value = "Authors">${auths}</td></tr>`;
 
         }
 
+        let endTable = '</table>';
+        document.getElementById('bookList').innerHTML = endTable;
 
 
 }
 
+function anchorClicked(e) {
+
+    //Cancel an action if event isn't handled
+    e.preventDefault();
+
+    let self = this;  
+
+    let cell = self.parentElement;
+
+    let row = cell.parentElement;
+
+    let data = row.querySelectorAll("td");
+
+    //Building a string for an unordered list
+    let myList = `<ul style="list-style-type: none">`;
+
+
+    for (let field of data) {
+
+        bookData += `<li><b>${field.dataset.value}`;
+
+    }
+
+    
+}
 
 
 
