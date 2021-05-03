@@ -8,7 +8,7 @@ class Footer extends HTMLElement
         this.innerHTML = `
         <div class="footer">
         <i class="fa fa-envelope" aria-hidden="true"></i>
-        <img src="linkedin.svg" width="16px"></img>
+        <img src="img/linkedin.svg" width="16px"></img>
      </div>
         `;
     }
