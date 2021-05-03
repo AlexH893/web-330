@@ -23,37 +23,18 @@
             </div>
             <div class="card">
                <div class="card-title">Book Listing</div>
-
                <div class="card-content" id="bookList">
-                   <table>
-                    <th>ISBN</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Pages</th>      
-                    <th>Authors</th>                                                                                                                                  
-                </table>
-                     <div class="row">
-                    </div>
-
-           </div>
-       </div>
-   </div>
-
+               </div>
+            </div>
+         </div>
          <!-- Link to return back to the index.html page. -->
          <a class="return-home" href="../index.html">Return</a>  
          <!--Card to display results-->
-
-
          <div class="card">
-
             <div class="card-title">Selected Book<span id="selectedBookTitle"></span></div>
-
             <div class="card-content" id="selectedBook" class="assign-results-text card-content">
-
             </div>
-        </div>
-
-
+         </div>
 
 <script type="javascript" src="../theme.js"></script>
 <script type="module">
@@ -61,71 +42,80 @@
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
-    //alert('Content loaded successfully.'); //Testing contentLoaded event
 
     //Creating a variable fileName and assign it the string value of the books.xml document
     let fileName = 'books.xml';
 
     //Using JavaScript's fetch API
-    fetch(fileName) 
-    .then(res => res.text())
-    .then(data => {
+    fetch(fileName)
+        .then(res => res.text())
+        .then(data => {
 
-        //Creating variable domParser, instantiating new DOMParser object
-        //and assigning it to the variable
-        let domParser = new DOMParser();
-
-
-        let xmlBooks = domParser.parseFromString(data, "text/xml");
-
-        //Passing in the xmlBooks var
-        loadBooks(xmlBooks);
+            //Creating variable domParser, instantiating new DOMParser object
+            //and assigning it to the variable
+            let domParser = new DOMParser();
 
 
-        addIsbnClickEvents();
+            let xmlBooks = domParser.parseFromString(data, "text/xml");
 
-    })
+            //Passing in the xmlBooks var
+            loadBooks(xmlBooks);
 
 
+            addIsbnClickEvents();
 
-
+        })
 
 });
 
-
-
-
 function loadBooks(xml) {
 
-        let books = xml.getElementsByTagName('book').text;
+    let books = xml.getElementsByTagName("book");
 
-    //tableData
+    let tableData = `<table  id='bookTable' class='table'><thead>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Pages</th>
+                    <th>Authors</th>
+                </thead>
+                <tbody>`;
 
-    
-        for (let book of books) {
+    for (let book of books) {
 
-            let isbn = book.getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
-            let title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;
-            let desc = book.getElementsByTagName("description")[0].childNodes[0].nodeValue;
-            let pages = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;
-            let auths = book.getElementsByTagName("authors")[0].childNodes[0].nodeValue;
+        let isbn = book.getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
+        let title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        let desc = book.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+        let pages = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;
+        let auths = book.getElementsByTagName("authors")[0].childNodes[0].nodeValue;
 
-            tableData += `<tr><td data-value="ISBN"><a href = "#" class="isbn-link">${isbn}</a></td><td data-value = "Title">${title}</td><td data-value = "Description">${desc}</td><td data-value = "Pages">${pages}</td><td data-value = "Authors">${auths}</td></tr>`;
+        tableData += `<tr><td data-value="ISBN">
+                <a href = "#" class="isbn-link">${isbn}</a></td>
+                <td data-value = "Title">${title}</td>
+                <td data-value = "Description">${desc}</td>
+                <td data-value = "Pages">${pages}</td>
+                <td data-value = "Authors">${auths}</td>
+                </tr>`;
 
-        }
+    }
 
-        let endTable = '</table>';
-        document.getElementById('bookList').innerHTML = endTable;
+    //Closing the HTML table
+    tableData += '</table>';
+
+    document.getElementById('bookList').innerHTML = tableData;
 
 
 }
 
 function anchorClicked(e) {
 
+    //debugging
+    console.log('ISBN has been clicked');
+
     //Cancel an action if event isn't handled
     e.preventDefault();
 
-    let self = this;  
+    let self = this;
 
     let cell = self.parentElement;
 
@@ -134,46 +124,33 @@ function anchorClicked(e) {
     let data = row.querySelectorAll("td");
 
     //Building a string for an unordered list
-    let myList = `<ul style="list-style-type: none">`;
-
+    let bookData = `<ul style="list-style-type: none">`;
 
     for (let field of data) {
 
-        bookData += `<li><b>${field.dataset.value}`;
-            //needs finishing
+        bookData += `<li><b>${field.dataset.value}</b>: ${field.innerHTML}</li>`;
     }
 
     //Binding the bookData variable to the selectedBook.innerHTML property
     document.getElementById('selectedBook').innerHTML = bookData;
 
-    
 }
 
+function addIsbnClickEvents() {
 
-    function addIsbnClickEvents() {
-
-        //Creating a variable viewButtons, assign it the results from document.querySelectorAll
-        let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
-
-
-        //Create standard for loop, in the body add event listeners for “click” using the anchorClicked() function
-        for (let index = 0; index < array.length; index++) {
-            viewButtons[index].addEventListener("click", anchorClicked);
-            
-        }
+    //Creating a variable viewButtons, assign it the results from document.querySelectorAll
+    let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
 
 
-
-
-
+    //Create standard for loop, in the body add event listeners for “click” using the anchorClicked() function
+    for (let index = 0; index < viewButtons.length; index++) {
+        viewButtons[index].addEventListener("click", anchorClicked);
 
     }
 
+    console.log("View buttons added from NodeList.");
 
-
-
-
-
+}
 </script>
 </body>
 </html>
