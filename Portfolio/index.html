@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<script src="js/header.js"></script>
-<header-component></header-component>
-   <body>
-      <script>
-        // document.body.className = 'fade';
-       </script>      
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://use.fontawesome.com/d4276bd064.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type = "module" src="js/header.js"></script>
+</head>
+<body>
+   <script>
+      // document.body.className = 'fade';
+   </script>      
    <div class="row">
-      <div class="col">
-         <div class="navbar navbar-inverse navbar-fixed-left">
-            <a href="index.html">
-            <img class="navImg" src="img/signature.png"></img>
-            </a>
-            <ul class="nav navbar-nav">
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="databasediagram.html">Database Diagrams</a></li>
-                <li><a href="apiunittests.html">API Unit Tests</a></li>
-                <li><a href="#">Bucket List</a></li>
-            </ul>
-         </div>
-      </div>
+      <header-component></header-component>
+      <div class="col"></div>
       <!--Header-->
       <div class="col" id="header">
          <h1>Alex Haefner</h1>
@@ -28,33 +23,27 @@
          <img src="img/800x300.png"></a>
       </div>
       <!--End of header-->
-      <div class="col" id="header">
+      <div class="col" id="header"></div>
+         <!--empty column-->
+
+   </div>
+   <!--end of 1st row-->
+   <div class="row">
+      <!--start of 2nd row-->
+      <div class="col">
+         <!--empty column-->
+      </div>
+      <div class="col">
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. 
+         </p>
+      </div>
+      <div class="col">
       </div>
    </div>
-
-
-   <div class="row">
-    <div class="col">
-    </div>
-    <div class="col">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type
-           specimen book. </p>
-    </div>
-    <div class="col">
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<footer-component></footer-component>
-   </body>
+   <script src="js/footer.js"></script>
+   <footer-component></footer-component>
+</body>
 </html>
