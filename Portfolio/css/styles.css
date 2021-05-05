@@ -149,3 +149,26 @@ text-align: left;
     padding-top: 2rem;
     word-spacing: 1rem;
   }
+
+
+/**Custom page transition using CSS keyframes
+   Specifying keyframe & name of keyframe
+*/
+@keyframes transitionIn {
+  from {
+    /**Changed value on load */
+      opacity: 0;
+      transform: rotateX(-10deg);
+  }
+  /**Going to default values */
+  to {
+      opacity: 1;
+      transform: rotateX(0);
+
+  }
+}
+
+body {
+  /*Defining the time it will take to go from the from values to the to values */
+  animation: transitionIn 0.75s;;
+}
