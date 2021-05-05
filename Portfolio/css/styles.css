@@ -39,13 +39,13 @@
 
   display: inline-block;
   overflow: hidden;
-  font-size: 12px;
+  font-size: 10px;
   }
 
   /**Phone number and email*/
   .col #contactText {
 
-    padding-left: 5em;
+    padding-left: 3.5em;
 
   }
 
@@ -100,19 +100,11 @@ text-align: left;
 
   }
 
- /* .col #employment1tasks1 {
- 
-
-
-  }*/
-
   #collegeDesc1, #collegeDesc2 {
 
     font-size: 12px;
     line-height: 1.5em;
   }
-
-
 
 
   /* Image above navbar */
@@ -121,6 +113,8 @@ text-align: left;
     width: 166px;
 
     padding-left: 1rem;
+
+    margin-bottom: 10%;
   }
 
   #header {
@@ -170,5 +164,11 @@ text-align: left;
 
 body {
   /*Defining the time it will take to go from the from values to the to values */
-  animation: transitionIn 0.75s;;
+  animation: transitionIn 0.50s;;
+}
+
+#resume {
+
+  padding-right: 8rem;
+
 }
