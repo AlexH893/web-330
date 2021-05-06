@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     padding-right: 10px;
-    grid-gap: 20px;
+    grid-gap: 10px;
     
 }
 
@@ -13,7 +13,12 @@
 #projects.col {
 
 margin-right: 10rem;
-width: 40px;
+
 }
 
+/* Adjusting width/positioning of entire element */
+.assign-content {
+    width: 195%;
+    padding-right: 30em;
 
+}
