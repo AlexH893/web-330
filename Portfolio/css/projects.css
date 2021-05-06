@@ -6,7 +6,7 @@
     grid-template-columns: auto auto auto;
     padding-right: 10px;
     grid-gap: 10px;
-    
+
 }
 
 /* Selects the entire element */
@@ -20,5 +20,12 @@ margin-right: 10rem;
 .assign-content {
     width: 195%;
     padding-right: 30em;
+}
+
+
+/** Styling background color of card body */
+
+div.card {
+    background-color: #f8ebea;
 
 }
