@@ -1,50 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://use.fontawesome.com/d4276bd064.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+<head>
+<meta charset="UTF-8">
+<title>Personal Bucket List</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/projects.css">
+<script src="https://use.fontawesome.com/d4276bd064.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type = "module" src="js/header.js"></script>
 </head>
-  <body>
-  <header>
-    <h1>
-        Alex Haefner
-    </h1>
-    <h3>
-        Web Developer
-    </h3>
+<body style="background-color: #f8ebea;">
+  <!-- Scroll to top button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>      
+  <div class="row">
+      <header-component></header-component>
+      <div class="col"></div>
+      
+<div class="row"></div>
+ 
+  <div class="col" id="projects">
+    <h1 class="app-header" style="text-align: center;">Bucket List</h1>
+    <div class="assign-content">
+        <div class="card">
+            <div class="card-title" style="text-align: center;">
+              Bucket List
+            </div>
+            <div class="card-content" id="projects-container">
+              <div class="card">
+                  <div class="card-title">WEB 231 Landing Page</div>
+                  <div class="card-content">Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330<br>
+                    https://alexh893.github.io/web-231/
+                  </div>
+              </div>
 
-    <div class="navbar navbar-inverse navbar-fixed-left">
-        <img src="signature.png"></img>
-        <ul class="nav navbar-nav">
+              <div class="card">
+                  <div class="card-title">WEB 330 Landing Page</div>
+                  <div class="card-content">Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330<br>
+                    https://alexh893.github.io/web-330/
+                  </div>
+              </div>
 
-         <li><a href="#">About</a></li>
-         <li><a href="#">Resume</a></li>
-         <li><a href="#">Projects</a></li>
-         <li><a href="#">Database Diagrams</a></li>
-         <li><a href="#">API Unit Tests</a></li>
-         <li><a href="#">Bucket List</a></li>
+              <div class="card">
+                  <div class="card-title">Composer App</div>
+                  <div class="card-content">
+                    Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330
+                  </div>
+              </div>
 
-        </ul>
-      </div>
+              <div class="card">
+                  <div class="card-title">GPA Calculator App</div>
+                  <div class="card-content">
+                    Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330
+                  </div>
+              </div>
 
-  </header>
+              <div class="card">
+                  <div class="card-title">In-N-Out-Books</div>
+                  <div class="card-content">
+                    Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330
+                  </div>
+              </div>
 
+              <div class="card">
+                  <div class="card-title">nodebucket</div>
+                  <div class="card-content">
+                    Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330
+                  </div>
+              </div>
 
+              <div class="card">
+                  <div class="card-title">Bob's Computer Repair Shop</div>
+                  <div class="card-content">
+                    Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330
+                  </div>
+              </div>
 
+              <div class="card">
+                  <div class="card-title">Project 8</div>
+                  <div class="card-content">
+                    Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330Landing page featuring projects
+                    created in the class WEB-330
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+<div class="col"></div>
 
+</div>
 
-
-
-
-
-
-
-    <footer>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <img src="linkedin.svg" width="16px"></img>
-        </footer>
-  </body>
+<script src="js/footer.js"></script>
+<footer-component></footer-component>
+<script src="js/scrollToTop.js"></script>
+</body>
 </html>
