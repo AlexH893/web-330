@@ -20,6 +20,9 @@
     padding-left: 160px;
   }
 
+  .col-w-60 {
+    border: 1px solid black;
+  }
 
 
   .main {
@@ -27,6 +30,8 @@
 
     padding: 0px 10px;
   }
+
+
 
   
 .col #resumeName {
@@ -40,6 +45,10 @@
   overflow: hidden;
   font-size: 10px;
   }
+
+  a#resumeLinks {
+    text-align: center;
+}
 
   /**Phone number and email*/
   .col #contactText {
