@@ -13,19 +13,13 @@ export class HttpClient {
 
             method: "GET"
 
-            .then(response => response.json())
+                .then(response => response.json())
 
             //needs finishing
 
         })
 
     }
-
-
-
-
-
-
 
 
 
