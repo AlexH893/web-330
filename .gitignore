@@ -1,4 +1,5 @@
 
+<<<<<<< Updated upstream
 index.zip
 *.png
 week-2.zip
@@ -11,4 +12,6 @@ week-5.zip
 week-6.zip
 week-7.zip
 web-330/
+=======
+>>>>>>> Stashed changes
 .vscode/settings.json
