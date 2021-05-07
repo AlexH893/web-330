@@ -43,38 +43,40 @@
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
-    //Adding import statement for the HttpClient class
-    import { HttpClient} from "./http-client.js";
+//Adding import statement for the HttpClient class
+import {
+    HttpClient
+} from "./http-client.js";
 
-    //Instantiate new HttpClient object, assign it to a new variable named http
-    let http = new HttpClient();
+//Instantiate new HttpClient object, assign it to a new variable named http
+let http = new HttpClient();
 
-    const isbns = [
+const isbns = [
 
-        '0345339681',
-        '0261103571',
-        '9780593099322',
-        '9780261102361',
-        '9780261102378',
-        '9780590302715',
-        '9780316769532',
-        '9780743273565',
-        '9780590405959'
-    ];
+    '0345339681',
+    '0261103571',
+    '9780593099322',
+    '9780261102361',
+    '9780261102378',
+    '9780590302715',
+    '9780316769532',
+    '9780743273565',
+    '9780590405959'
+];
 
-    const params = {
+const params = {
 
-        "bibkeys": `ISBN:${isbns.join(",")}`,
-        "format": "json",
-        "jscmd": "details"
+    "bibkeys": `ISBN:${isbns.join(",")}`,
+    "format": "json",
+    "jscmd": "details"
 
-    };
+};
 
-    //Assigning the literal url to the variable url
-    const url = 'https://openlibrary.org/api/books';
+//Assigning the literal url to the variable url
+const url = 'https://openlibrary.org/api/books';
 
-    //Call the http.get function and supply it with the open library URL and the params objects
-    http.get(url, params).then(res => {
+//Call the http.get function and supply it with the open library URL and the params objects
+http.get(url, params).then(res => {
 
         console.log(res);
 
@@ -92,7 +94,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-    function getBook(e) {
+function getBook(e) {
 
     e.preventDefault();
 
@@ -108,84 +110,83 @@ window.addEventListener('DOMContentLoaded', (event) => {
         "format": "json",
         "jscmd": "details"
 
-};
+    };
 
 
-http.get(url, params).then(res => {
+    http.get(url, params).then(res => {
 
-console.log(res);
+        console.log(res);
 
-//Call the buildHtmlString function supplying it the res object and “ul” string value
-//Binding the results to the selectedBook div 
-document.getElementById('selectedBook').innerHTML = buildString(res, 'ul')
+        //Call the buildHtmlString function supplying it the res object and “ul” string value
+        //Binding the results to the selectedBook div 
+        document.getElementById('selectedBook').innerHTML = buildString(res, 'ul')
 
-.catch(e => {
+            .catch(e => {
 
-console.log(e);
-});
-})
+                console.log(e);
+            });
+    })
 
 
 
 } //end of getBook
 
 
-    function buildHtmlString(res, format) {
+function buildHtmlString(res, format) {
 
 
-        let tableString = `<table  id='bookTable' class='table'><thead>
-                    <th>ISBN</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Pages</th>
-                    <th>Authors</th>
-                </thead>
-                <tbody>`;
+    let tableString = `<table  id='bookTable' class='table'><thead>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Pages</th>
+                <th>Authors</th>
+            </thead>
+            <tbody>`;
 
-        let ulString = "";
-
-
-        for (let key in res) {
-
-            ulString += `<ul style="list-style-type: none;">`;
-
-                if (res.hasOwnProperty(key)) {
-
-                    let authors = [];
-                    if(res[key].details.authors) {
-
-                        authors = res[key].details.authors.map(function(author) {
-
-                            return author.name;
-            })
-
-                    }
+    let ulString = "";
 
 
-                    let book = {
+    for (let key in res) {
 
-                        isbn: res[key].details.isbn_13 | res[key].details.isbn_13 | res[key].details.isbn_10,
-                        title: res[key].details.title,
-                        description: res[key].details.subtitle / res[key].details.subtitle / "N/A",
-                        pages: res[key].details.number_of_pages / res[key].details.number_of_pages / "N/A",
-                        authors: authors.join(",")
+        ulString += `<ul style="list-style-type: none;">`;
 
-                    }
+        if (res.hasOwnProperty(key)) {
 
-                    ulString += `<li><b>ISBN:</b> ${book.isbn}</li><li><b>Title:</b> ${book.title}</li><li><b>Description:</b> ${book.description}</li><li><b>
-                        Pages:</b> ${book.pages}</li><li><b>Authors:</b> ${book.authors}</li>`;
+            let authors = [];
+            if (res[key].details.authors) {
 
-                    tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td><td>${book.pages}
-                        </td><td>${book.authors}</td></tr>`;
+                authors = res[key].details.authors.map(function(author) {
 
-                }
+                    return author.name;
+                })
+
+            }
+
+
+            let book = {
+
+                isbn: res[key].details.isbn_13 | res[key].details.isbn_13 | res[key].details.isbn_10,
+                title: res[key].details.title,
+                description: res[key].details.subtitle / res[key].details.subtitle / "N/A",
+                pages: res[key].details.number_of_pages / res[key].details.number_of_pages / "N/A",
+                authors: authors.join(",")
+
+            }
+
+            ulString += `<li><b>ISBN:</b> ${book.isbn}</li><li><b>Title:</b> ${book.title}</li><li><b>Description:</b> ${book.description}</li><li><b>
+                    Pages:</b> ${book.pages}</li><li><b>Authors:</b> ${book.authors}</li>`;
+
+            tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td><td>${book.pages}
+                    </td><td>${book.authors}</td></tr>`;
 
         }
 
     }
 
-});
+}
 
+});
 
 </script>
 </body>
