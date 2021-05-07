@@ -16,6 +16,7 @@
          <link rel="stylesheet" href="../site.css" type="text/css">
          <script src="https://use.fontawesome.com/d4276bd064.js"></script>
          <title>WEB 231 – Enterprise JavaScript I</title>
+         
       </head>
       <body class="light-theme">
          <div id="container">
@@ -41,6 +42,124 @@
 
 
 window.addEventListener('DOMContentLoaded', (event) => {
+
+    //Adding import statement for the HttpClient class
+    import { HttpClient} from "./http-client.js";
+
+    //Instantiate new HttpClient object, assign it to a new variable named http
+    let http = new HttpClient();
+
+    const isbns = [
+
+        '0345339681',
+        '0261103571',
+        '9780593099322',
+        '9780261102361',
+        '9780261102378',
+        '9780590302715',
+        '9780316769532',
+        '9780743273565',
+        '9780590405959'
+    ];
+
+    const params = {
+
+        "bibkeys": `ISBN:${isbns.join(",")}`,
+        "format": "json",
+        "jscmd": "details"
+
+    };
+
+    //Assigning the literal url to the variable url
+    const url = 'https://openlibrary.org/api/books';
+
+    //Call the http.get function and supply it with the open library URL and the params objects
+    http.get(url, params).then(res => {
+
+        console.log(res);
+
+        document.getElementById('bookListing').innerHTML = buildHtmlString(res, 'table');
+
+        addIsbnClickEvents();
+
+    })
+
+    //Add a catch() statement with an arrow function, write the error to the console
+    .catch(e => {
+
+        console.log(e);
+    });
+
+
+
+    function getBook(e) {
+
+    e.preventDefault();
+
+    //Creating variable named self and assign it the value this
+    let self = this;
+
+    //Create a variable named isbn and assign it the innerText of the self variable
+    let isbn = self.innerText;
+
+    const params = {
+
+        "bibkeys": `ISBN:${isbns.join(",")}`,
+        "format": "json",
+        "jscmd": "details"
+
+};
+
+
+http.get(url, params).then(res => {
+
+console.log(res);
+
+//Call the buildHtmlString function supplying it the res object and “ul” string value
+//Binding the results to the selectedBook div 
+document.getElementById('selectedBook').innerHTML = buildString(res, 'ul');
+
+addIsbnClickEvents();
+
+})
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //Creating a variable fileName and assign it the string value of the books.xml document
@@ -151,6 +270,9 @@ function addIsbnClickEvents() {
     console.log("View buttons added from NodeList.");
 
 }
+
+
+
 </script>
 </body>
 </html>
