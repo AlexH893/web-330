@@ -117,81 +117,23 @@ console.log(res);
 
 //Call the buildHtmlString function supplying it the res object and “ul” string value
 //Binding the results to the selectedBook div 
-document.getElementById('selectedBook').innerHTML = buildString(res, 'ul');
+document.getElementById('selectedBook').innerHTML = buildString(res, 'ul')
 
-addIsbnClickEvents();
+.catch(e => {
 
+console.log(e);
+});
 })
 
 
 
-    }
+} //end of getBook
 
 
+    function buildHtmlString(res, format) {
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //Creating a variable fileName and assign it the string value of the books.xml document
-    let fileName = 'books.xml';
-
-    //Using JavaScript's fetch API
-    fetch(fileName)
-        .then(res => res.text())
-        .then(data => {
-
-            //Creating variable domParser, instantiating new DOMParser object
-            //and assigning it to the variable
-            let domParser = new DOMParser();
-
-
-            let xmlBooks = domParser.parseFromString(data, "text/xml");
-
-            //Passing in the xmlBooks var
-            loadBooks(xmlBooks);
-
-
-            addIsbnClickEvents();
-
-        })
-
-});
-
-function loadBooks(xml) {
-
-    let books = xml.getElementsByTagName("book");
-
-    let tableData = `<table  id='bookTable' class='table'><thead>
+        let tableString = `<table  id='bookTable' class='table'><thead>
                     <th>ISBN</th>
                     <th>Title</th>
                     <th>Description</th>
@@ -200,77 +142,49 @@ function loadBooks(xml) {
                 </thead>
                 <tbody>`;
 
-    for (let book of books) {
-
-        let isbn = book.getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
-        let title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;
-        let desc = book.getElementsByTagName("description")[0].childNodes[0].nodeValue;
-        let pages = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;
-        let auths = book.getElementsByTagName("authors")[0].childNodes[0].nodeValue;
-
-        tableData += `<tr><td data-value="ISBN">
-                <a href = "#" class="isbn-link">${isbn}</a></td>
-                <td data-value = "Title">${title}</td>
-                <td data-value = "Description">${desc}</td>
-                <td data-value = "Pages">${pages}</td>
-                <td data-value = "Authors">${auths}</td>
-                </tr>`;
-
-    }
-
-    //Closing the HTML table
-    tableData += '</table>';
-
-    document.getElementById('bookList').innerHTML = tableData;
+        let ulString = "";
 
 
-}
+        for (let key in res) {
 
-function anchorClicked(e) {
+            ulString += `<ul style="list-style-type: none;">`;
 
-    //debugging
-    console.log('ISBN has been clicked');
+                if (res.hasOwnProperty(key)) {
 
-    //Cancel an action if event isn't handled
-    e.preventDefault();
+                    let authors = [];
+                    if(res[key].details.authors) {
 
-    let self = this;
+                        authors = res[key].details.authors.map(function(author) {
 
-    let cell = self.parentElement;
+                            return author.name;
+            })
 
-    let row = cell.parentElement;
-
-    let data = row.querySelectorAll("td");
-
-    //Building a string for an unordered list
-    let bookData = `<ul style="list-style-type: none">`;
-
-    for (let field of data) {
-
-        bookData += `<li><b>${field.dataset.value}</b>: ${field.innerHTML}</li>`;
-    }
-
-    //Binding the bookData variable to the selectedBook.innerHTML property
-    document.getElementById('selectedBook').innerHTML = bookData;
-
-}
-
-function addIsbnClickEvents() {
-
-    //Creating a variable viewButtons, assign it the results from document.querySelectorAll
-    let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
+                    }
 
 
-    //Create standard for loop, in the body add event listeners for “click” using the anchorClicked() function
-    for (let index = 0; index < viewButtons.length; index++) {
-        viewButtons[index].addEventListener("click", anchorClicked);
+                    let book = {
+
+                        isbn: res[key].details.isbn_13 | res[key].details.isbn_13 | res[key].details.isbn_10,
+                        title: res[key].details.title,
+                        description: res[key].details.subtitle / res[key].details.subtitle / "N/A",
+                        pages: res[key].details.number_of_pages / res[key].details.number_of_pages / "N/A",
+                        authors: authors.join(",")
+
+                    }
+
+                    ulString += `<li><b>ISBN:</b> ${book.isbn}</li><li><b>Title:</b> ${book.title}</li><li><b>Description:</b> ${book.description}</li><li><b>
+                        Pages:</b> ${book.pages}</li><li><b>Authors:</b> ${book.authors}</li>`;
+
+                    tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td><td>${book.pages}
+                        </td><td>${book.authors}</td></tr>`;
+
+                }
+
+        }
 
     }
 
-    console.log("View buttons added from NodeList.");
-
-}
-
+});
 
 
 </script>
