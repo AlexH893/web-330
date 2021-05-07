@@ -13,9 +13,8 @@ export class HttpClient {
 
             method: "GET"
 
-                .then(response => response.json())
+                .then(response => response.json(res))
 
-            //needs finishing
 
         })
 
