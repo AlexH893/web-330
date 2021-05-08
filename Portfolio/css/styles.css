@@ -44,7 +44,7 @@
   display: inline-block;
   overflow: hidden;
   font-size: 10px;
-  padding-left: 25em;
+  padding-left: 26em;
   }
 
  .col #resumeLink2 {
@@ -58,7 +58,7 @@
   /**Phone number and email*/
   .col #contactText {
 
-    padding-left: 15;
+    padding-left: 30;
 
   }
 
