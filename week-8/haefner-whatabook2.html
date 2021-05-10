@@ -40,17 +40,19 @@
 <script type="javascript" src="../theme.js"></script>
 <script type="module">
 
-
-window.addEventListener('DOMContentLoaded', (event) => {
-
 //Adding import statement for the HttpClient class
 import {
     HttpClient
 } from "./http-client.js";
 
-//Instantiate new HttpClient object, assign it to a new variable named http
-let http = new HttpClient();
+window.addEventListener('DOMContentLoaded', (event) => {
 
+
+
+//Instantiate new HttpClient object, assign it to a new variable named http
+const http = new HttpClient();
+
+let book = {};
 const isbns = [
 
     '0345339681',
@@ -135,14 +137,7 @@ function getBook(e) {
 function buildHtmlString(res, format) {
 
 
-    let tableString = `<table  id='bookTable' class='table'><thead>
-                <th>ISBN</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Pages</th>
-                <th>Authors</th>
-            </thead>
-            <tbody>`;
+    let tableString = `<table><tr><th>ISBN</th><th>Title</th><th>Description</th><th>Pages</th><th>Authors</th></tr>`;
 
     let ulString = "";
 
@@ -162,7 +157,7 @@ function buildHtmlString(res, format) {
                 })
 
             }
-
+            let bookDetails = res[key].details;
 
             let book = {
 

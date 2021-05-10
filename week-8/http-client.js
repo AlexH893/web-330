@@ -1,22 +1,22 @@
 export class HttpClient {
 
-    async get(url, params) {
+    async get(url, params = "") {
 
-        params = "";
 
         //Instantiate new URL object, supply it the url parameter, assign the results to the url parameter
-        url = new URL(url);
+        let urlOb = new URL(url);
 
-        url.search = new URLSearchParams(params);
+        let paramOb = new URLSearchParams(params);
+        urlOb.search = paramOb;
 
-        const res = await fetch(url.toString(), {
+        const res = await fetch(urlOb.toString(), {
 
-            method: "GET"
-
-                .then(response => response.json(res))
-
-
+            method: "GET",
         })
+
+            return res.json();
+
+        
 
     }
 
