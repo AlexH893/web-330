@@ -169,11 +169,11 @@ function buildHtmlString(res, format) {
 
             }
 
-            ulString += `<li><b>ISBN:</b> ${book.isbn}</li><li><b>Title:</b> ${book.title}</li><li><b>Description:</b> ${book.description}</li><li><b>
-                    Pages:</b> ${book.pages}</li><li><b>Authors:</b> ${book.authors}</li>`;
+            ulString += `<li><b>ISBN:</b> ${book.isbn}</li><li><b>Title:</b> ${book.title}</li><li><b>Description:</b> ${book.description}</li>
+                    <li><b>Pages:</b> ${book.pages}</li><li><b>Authors:</b> ${book.authors}</li>`;
 
-            tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td><td>${book.pages}
-                    </td><td>${book.authors}</td></tr>`;
+                    tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td>
+                        <td>${book.pages}</td><td>${book.authors}</td></tr>`;
 
         }
 
