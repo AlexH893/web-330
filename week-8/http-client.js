@@ -1,3 +1,9 @@
+/** 
+   Title: http-client.js
+   Author: Alex Haefner
+   Date: 5-8-21
+   Description: Exported HttpClient class
+*/
 export class HttpClient {
 
     async get(url, params = "") {
