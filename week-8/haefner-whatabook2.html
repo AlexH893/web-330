@@ -69,8 +69,8 @@ const isbns = [
 const params = {
 
     "bibkeys": `ISBN: ${isbns.join(",")}`,
-        "format": "json",
-        "jscmd": "details"
+    "format": "json",
+    "jscmd": "details"
 
 };
 
@@ -90,8 +90,8 @@ http.get(url, params).then(res => {
 
     //Add a catch() statement with an arrow function, write the error to the console
     .catch(e => {
-                console.log(e);
-            })
+        console.log(e);
+    })
 
 
 function getBook(e) {
@@ -106,7 +106,7 @@ function getBook(e) {
 
     let object = {};
 
-    object [isbn] = book[isbn];
+    object[isbn] = book[isbn];
 
     //Call the buildHtmlString function supplying it the res object and “ul” string value
     //Binding the results to the selectedBook div 
@@ -116,7 +116,7 @@ function getBook(e) {
 
 } //end of getBook
 
-
+//Building the table
 function buildHtmlString(res, format) {
 
 
@@ -127,7 +127,7 @@ function buildHtmlString(res, format) {
 
     for (const key in res) {
 
-       // ulString += `<ul style="list-style-type: none;">`;
+        // ulString += `<ul style="list-style-type: none;">`;
 
         if (res.hasOwnProperty(key)) {
 
@@ -145,17 +145,17 @@ function buildHtmlString(res, format) {
             let book = {
 
                 isbn: bookDetails.isbn_13 ? bookDetails.isbn_13 : bookDetails.isbn_10,
-                title: bookDetails.title, 
-                    description: bookDetails.subtitle ? bookDetails.subtitle : "N/A",
-                    pages: bookDetails.number_of_pages ? bookDetails.number_of_pages : "N/A",
-                    authors : authors.join(", ")
+                title: bookDetails.title,
+                description: bookDetails.subtitle ? bookDetails.subtitle : "N/A",
+                pages: bookDetails.number_of_pages ? bookDetails.number_of_pages : "N/A",
+                authors: authors.join(", ")
 
             }
 
             ulString += `<li><b>ISBN:</b> ${book.isbn}</li><li><b>Title:</b> ${book.title}</li><li><b>Description:</b> ${book.description}</li>
                     <li><b>Pages:</b> ${book.pages}</li><li><b>Authors:</b> ${book.authors}</li>`;
 
-                    tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td>
+            tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td>
                         <td>${book.pages}</td><td>${book.authors}</td></tr>`;
 
         }
@@ -168,14 +168,14 @@ function buildHtmlString(res, format) {
     return (format === "table") ? tableString : ulString;
 
 }
+
+//Fires when isbn is clicked
 function addIsbnClickEvents() {
-                let links = document.getElementsByClassName("isbn-link");
-                Array.from(links).forEach(element => {
-                    element.addEventListener("click", getBook);
-                });
-            }
-
-
+    let links = document.getElementsByClassName("isbn-link");
+    Array.from(links).forEach(element => {
+        element.addEventListener("click", getBook);
+    });
+}
 </script>
 </body>
 </html>
