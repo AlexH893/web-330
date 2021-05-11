@@ -1,0 +1,11 @@
+/** 
+   Title: haefner-whatabook2.css
+   Author: Alex Haefner
+   Date: 5-8-21
+   Description: Styling for haefner-whatabook2.html
+*/
+
+/*Styling the list (removes the bullet points */
+li {
+    list-style-type: none;
+}
