@@ -20,6 +20,36 @@
     padding-left: 160px;
   }
 
+#alexh1 {
+
+  margin-left: -2.5rem;
+  font-size: 4rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+#alexh4 {
+
+  margin-left: 2rem;
+  margin-bottom: 1em;
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+#codeImg:hover {
+
+opacity: .8;
+}
+
+p#welcomeText {
+
+  margin-top: 2em;
+  font-size: 1.5em;
+  font-family: 'Raleway', sans-serif;
+  line-height: 45px;
+
+}
+
+
   .col-w-60 {
     border: 1px solid black;
   }
@@ -171,6 +201,7 @@ text-align: left;
     text-align: center;
     padding-top: 2rem;
     word-spacing: 1rem;
+    
   }
 
 
