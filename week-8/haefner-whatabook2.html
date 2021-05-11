@@ -52,7 +52,10 @@ import {
 //Instantiate new HttpClient object, assign it to a new variable named http
 const http = new HttpClient();
 
+//Creating book object literal
 let book = {};
+
+//Creating array filled with isbns
 const isbns = [
 
     '0345339681',
@@ -127,7 +130,7 @@ function buildHtmlString(res, format) {
 
     for (const key in res) {
 
-        // ulString += `<ul style="list-style-type: none;">`;
+         ulString += `<ul style="list-style-type: none;">`;
 
         if (res.hasOwnProperty(key)) {
 
