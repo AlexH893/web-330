@@ -32,8 +32,8 @@
          <a class="return-home" href="../index.html">Return</a>  
          <!--Card to display results-->
          <div class="card">
-            <div class="card-title">Selected Book<span id="selectedBookTitle"></span></div>
-            <div class="card-content" id="selectedBook" class="assign-results-text card-content">
+            <div class="card-title">Selected Book</div>
+            <div class="card-content" id="selectedBook">
             </div>
          </div>
 
@@ -45,7 +45,7 @@ import {
     HttpClient
 } from "./http-client.js";
 
-window.addEventListener('DOMContentLoaded', (event) => {
+//window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
@@ -68,32 +68,30 @@ const isbns = [
 
 const params = {
 
-    "bibkeys": `ISBN:${isbns.join(",")}`,
-    "format": "json",
-    "jscmd": "details"
+    "bibkeys": `ISBN: ${isbns.join(",")}`,
+        "format": "json",
+        "jscmd": "details"
 
 };
 
 //Assigning the literal url to the variable url
-const url = 'https://openlibrary.org/api/books';
+const url = "https://openlibrary.org/api/books";
 
 //Call the http.get function and supply it with the open library URL and the params objects
 http.get(url, params).then(res => {
 
         console.log(res);
 
-        document.getElementById('bookListing').innerHTML = buildHtmlString(res, 'table');
-
+        document.getElementById("bookList").innerHTML = buildHtmlString(res, "table");
+        book = res;
         addIsbnClickEvents();
 
     })
 
     //Add a catch() statement with an arrow function, write the error to the console
     .catch(e => {
-
-        console.log(e);
-    });
-
+                console.log(e);
+            })
 
 
 function getBook(e) {
@@ -106,28 +104,13 @@ function getBook(e) {
     //Create a variable named isbn and assign it the innerText of the self variable
     let isbn = self.innerText;
 
-    const params = {
+    let object = {};
 
-        "bibkeys": `ISBN:${isbns.join(",")}`,
-        "format": "json",
-        "jscmd": "details"
+    object [isbn] = book[isbn];
 
-    };
-
-
-    http.get(url, params).then(res => {
-
-        console.log(res);
-
-        //Call the buildHtmlString function supplying it the res object and “ul” string value
-        //Binding the results to the selectedBook div 
-        document.getElementById('selectedBook').innerHTML = buildString(res, 'ul')
-
-            .catch(e => {
-
-                console.log(e);
-            });
-    })
+    //Call the buildHtmlString function supplying it the res object and “ul” string value
+    //Binding the results to the selectedBook div 
+    document.getElementById('selectedBook').innerHTML = buildHtmlString(object);
 
 
 
@@ -142,7 +125,7 @@ function buildHtmlString(res, format) {
     let ulString = "";
 
 
-    for (let key in res) {
+    for (const key in res) {
 
         ulString += `<ul style="list-style-type: none;">`;
 
@@ -161,11 +144,11 @@ function buildHtmlString(res, format) {
 
             let book = {
 
-                isbn: res[key].details.isbn_13 | res[key].details.isbn_13 | res[key].details.isbn_10,
-                title: res[key].details.title,
-                description: res[key].details.subtitle / res[key].details.subtitle / "N/A",
-                pages: res[key].details.number_of_pages / res[key].details.number_of_pages / "N/A",
-                authors: authors.join(",")
+                isbn: bookDetails.isbn_13 ? bookDetails.isbn_13 : bookDetails.isbn_10,
+                title: bookDetails.title, 
+                    description: bookDetails.subtitle ? bookDetails.subtitle : "N/A",
+                    pages: bookDetails.number_of_pages ? bookDetails.number_of_pages : "N/A",
+                    authors : authors.join(", ")
 
             }
 
@@ -179,12 +162,19 @@ function buildHtmlString(res, format) {
 
     }
 
-    //Closing table
+    //Closing tables
+    ulString += "</ul>";
     tableString += '</table>';
+    return (format === "table") ? tableString : ulString;
 
 }
+function addIsbnClickEvents() {
+                let links = document.getElementsByClassName("isbn-link");
+                Array.from(links).forEach(element => {
+                    element.addEventListener("click", getBook);
+                });
+            }
 
-});
 
 </script>
 </body>
