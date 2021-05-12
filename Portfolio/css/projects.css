@@ -4,8 +4,9 @@
 {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding-right: 10px;
-    grid-gap: 10px;
+    
+    grid-gap: 15px;
+    background-color:rgba(0, 0, 0, 0);
 
 }
 
@@ -18,14 +19,34 @@ margin-right: 10rem;
 
 /* Adjusting width/positioning of entire element */
 .assign-content {
-    width: 195%;
-    padding-right: 30em;
+
+    width: 220%;
+    
 }
 
-
-/** Styling background color of card body */
-
+/* Transparent background */
 div.card {
-    background-color: #f8ebea;
 
+    background-color:rgba(0, 0, 0, 0);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+}
+
+/* Zoom in on hover */
+.card:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+      
+}
+
+.card-title {
+text-align: center;
+/* font-style: oblique; */
+}
+
+/* Selecting card h1s */
+#schoolProjects, #databaseDiagramsH, #unitTestsH, #bucketListH {
+
+text-align: center;
+font-weight: bold;
 }
