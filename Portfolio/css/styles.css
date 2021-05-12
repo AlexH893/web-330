@@ -6,21 +6,60 @@
     /* Space between links */
     line-height: 1.8em;
   }
+
+/* Nav link styling */
+  .navbar-fixed-left .navList a.link{
+  color: #634240;
+  opacity: 0.85;
+}
+
+.navbar-fixed-left .navList a.link:hover{
+    opacity: 1 !important;
+    text-decoration: none;
+}
+
+/*Removing bullet points */
+.navbar-fixed-left .navList li {
+  list-style-type: none;
+}
+
+
+
+.link::before {
+  transition: 300ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  /* Color of line */
+  background-color: #E89A94;
+
+}
+
+.link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+  top: 16px;
+
+}
+
+/* Length of the line */
+.link-ltr:hover::before {
+  width: 100%;
+
+}
+
+
+.link { 
+  position: relative;
   
+ }
 
 
 
-
-
-
-
-
-
-
-  .navbar-fixed-left .navbar-nav > li {
+  .navbar-fixed-left .navList > li {
     float: none;  /* Cancel default li float: left */
     width: 150px;
-    padding-left: 1rem;
+    padding-left: -5rem;
     font-family: PT-Serif;
 
   }
