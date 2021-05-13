@@ -1,310 +1,191 @@
 .navbar-fixed-left {
-    width: 140px;
-    position: fixed;
-    border-radius: 0;
-    height: 75%;
-    /* Space between links */
-    line-height: 1.8em;
-  }
+	width: 140px;
+	position: fixed;
+	border-radius: 0;
+	height: 75%;
+	/* Space between links */
+	line-height: 1.8em;
+}
+
 
 /* Nav link styling */
-  .navbar-fixed-left .navList a.link{
-  color: #634240;
-  opacity: 0.85;
+
+.navbar-fixed-left .navList a.link {
+	color: #634240;
+	opacity: 0.85;
 }
 
-.navbar-fixed-left .navList a.link:hover{
-    opacity: 1 !important;
-    text-decoration: none;
+.navbar-fixed-left .navList a.link:hover {
+	opacity: 1 !important;
+	text-decoration: none;
 }
+
 
 /*Removing bullet points */
+
 .navbar-fixed-left .navList li {
-  list-style-type: none;
+	list-style-type: none;
 }
 
-
-
 .link::before {
-  transition: 300ms;
-  height: 2px;
-  content: "";
-  position: absolute;
-  /* Color of line */
-  background-color: #E89A94;
-
+	transition: 300ms;
+	height: 2px;
+	content: "";
+	position: absolute;
+	/* Color of line */
+	background-color: #E89A94;
 }
 
 .link-ltr::before {
-  width: 0%;
-  bottom: 10px;
-  top: 16px;
-
+	width: 0%;
+	bottom: 10px;
+	top: 16px;
 }
+
 
 /* Length of the line */
-.link-ltr:hover::before {
-  width: 100%;
 
+.link-ltr:hover::before {
+	width: 100%;
 }
 
+.link {
+	position: relative;
+}
 
-.link { 
-  position: relative;
-  
- }
+.navbar-fixed-left .navList>li {
+	float: none;
+	/* Cancel default li float: left */
+	width: 150px;
+	padding-left: -5rem;
+	font-family: PT-Serif;
+}
 
-
-
-  .navbar-fixed-left .navList > li {
-    float: none;  /* Cancel default li float: left */
-    width: 150px;
-    padding-left: -5rem;
-    font-family: PT-Serif;
-
-  }
-
-
-  .navbar-fixed-left + .container {
-    padding-left: 160px;
-  }
+.navbar-fixed-left+.container {
+	padding-left: 160px;
+}
 
 #alexh1 {
-
-  margin-left: -2.5rem;
-  font-size: 4rem;
-  font-family: 'Raleway', sans-serif;
+	margin-left: -2.5rem;
+	font-size: 4rem;
+	font-family: 'Raleway', sans-serif;
 }
 
 #alexh4 {
-
-  margin-left: 2rem;
-  margin-bottom: 1em;
-  font-size: 2rem;
-  font-family: 'Raleway', sans-serif;
+	margin-left: 2rem;
+	margin-bottom: 1em;
+	font-size: 2rem;
+	font-family: 'Raleway', sans-serif;
 }
 
 #codeImg:hover {
-
-opacity: .8;
+	opacity: .8;
 }
 
 p#welcomeText {
+	margin-top: 2em;
+	font-size: 1.5em;
+	font-family: 'Raleway', sans-serif;
+	line-height: 45px;
+}
 
-  margin-top: 2em;
-  font-size: 1.5em;
-  font-family: 'Raleway', sans-serif;
-  line-height: 45px;
+.col-w-60 {
+	border: 1px solid black;
+}
 
+.main {
+	margin-left: 160px;
+	/* Same as the width of the sidenav */
+	padding: 0px 10px;
 }
 
 
-  .col-w-60 {
-    border: 1px solid black;
-  }
 
+/* Image above navbar */
 
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-
-    padding: 0px 10px;
-  }
-
-
-
-  
-.col #resumeName {
-  text-align: center;
+.navbar img {
+	width: 250px;
+	padding-left: 1rem;
+	margin-bottom: 10%;
 }
 
-  /**Github and linkedin links */
- .col #resumeLink1 {
-
-  display: inline-block;
-  overflow: hidden;
-  font-size: 10px;
-  padding-left: 26em;
-  }
-
- .col #resumeLink2 {
-  display: inline-block;
-  overflow: hidden;
-  font-size: 10px;
-
-
+#header {
+	padding-top: 2.5rem;
 }
 
-  /**Phone number and email*/
-  .col #contactText {
-
-    padding-left: 19rem;
-
-  }
-
-  /** Skills header */
-  .col #skillsHeader {
-    font-size: 18px;
-  }
-
-  /**Line */
-  .col hr {
-    border: 1px solid black;
-  }
-
-  /**Skills header*/
-  .col #skillsHeader {
-
-text-align: left;
-  }
-
-  .col #employmentHeader, #educationHeader {
-    font-size: 18px;
-  }
-
-  .col #employmentLocation1,#employmentLocation2 {
-    font-size: 10px;
-    text-align: center;
-    margin-bottom: 3em; 
-  }
-
-  .col #collegeDate1, #collegeDate2 {
-    font-size: 10px;
-    text-align: center;
-  }
-
-  .col #workDate1, #workDate2 {
-
-    font-size: 10px;
-    text-align: center;
-    margin-top: -3em;
-    margin-bottom: 2em;
-  }
-
-  .col #collegeLocation1, #collegeLocation2 {
-    font-size: 10px;
-    text-align: center;
+.row p {
+	font-family: PT-Serif;
+}
 
 
+/** Text for about me */
 
-  }
-
-  .col #employmentName1, #collegeName1, #collegeName2 {
-    text-align: center;
-    margin-bottom: 1px;
-
-  }
-
-  .col #employment1tasks, #employment1tasks1{
-    font-size: 12px;
-    line-height: 1.5em;
-    margin-bottom: -1px;
-
-  }
-
-  .col #lastTask {
-
-    font-size: 12px;
-    line-height: 1.5em;
-    margin-bottom: 15px; 
-  }
-
-  #collegeDesc1, #collegeDesc2 {
-
-    font-size: 12px;
-    line-height: 1.5em;
-  }
+.col .aboutMe {
+	padding-top: 2.5rem;
+	line-height: 2rem;
+}
 
 
-  /* Image above navbar */
-  .navbar img {
+/** Footer styling, links */
 
-    width: 166px;
-
-    padding-left: 1rem;
-
-    margin-bottom: 10%;
-  }
-
-  #header {
-    padding-top: 2.5rem;
-
-  }
-
-  .row p {
-    font-family: PT-Serif;
-
-  }
-
-
-  /** Text for about me */
-  .col .aboutMe {
-    padding-top: 2.5rem;
-    line-height: 2rem;
-  }
-
-  /** Footer styling, links */
-  .footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding-top: 2rem;
-    word-spacing: 1rem;
-    
-  }
+.footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding-top: 2rem;
+	word-spacing: 1rem;
+}
 
 
 /**Custom page transition using CSS keyframes
    Specifying keyframe & name of keyframe
 */
-@keyframes transitionIn {
-  from {
-    /**Changed value on load */
-      opacity: 0;
-      transform: rotateX(-10deg);
-  }
-  /**Going to default values */
-  to {
-      opacity: 1;
-      transform: rotateX(0);
 
-  }
+@keyframes transitionIn {
+	from {
+		/**Changed value on load */
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+	/**Going to default values */
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
 }
 
 body {
-  /*Defining the time it will take to go from the from values to the to values */
-  animation: transitionIn 0.50s;
-
+	/*Defining the time it will take to go from the from values to the to values */
+	animation: transitionIn 0.50s;
 }
 
-#resume {
-
-  padding-right: 8rem;
-
-}
 
 /* Back to top button */
+
 #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #E89A94;
-  color: #634240;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-  /* Fade in effect */
-  opacity: 0.6;
-  transition: 0.3s;
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #E89A94; 
+	color: #634240;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+	/* Fade in effect */
+	opacity: 0.6;
+	transition: 0.3s;
 }
 
+
 /* Top button on hover */
+
 #myBtn:hover {
-  background-color: #c9645d;
-  opacity: 1;
+	background-color: #c9645d;
+	opacity: 1;
 }
