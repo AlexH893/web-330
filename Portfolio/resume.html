@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Resume</title>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/resume.css">
+<link rel="stylesheet" href="css/downloadBtn.css">
+<script type = "module" src="js/arrow-lib/arrow.js"></script> 
 <script src="https://use.fontawesome.com/d4276bd064.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,7 +16,11 @@
   <body style="background: linear-gradient(90deg, rgba(248,235,234,1) 0%, rgba(245,220,218,1) 25%, rgba(241,200,197,1) 75%, rgba(236,172,167,1) 100%, rgba(232,154,148,1) 100%);">
 
   <!-- Scroll to top button -->
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>   
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+
+
+
+
    <div class="row" id="resume">
       <header-component></header-component>
       <div class="col-sm-1"></div>
@@ -23,10 +30,10 @@
           <div class="col">
          <h3 id="resumeName">Alex Haefner's Resume</h3>
          <br>
-         <a id="resumeLink1" href="https://github.com/AlexH893/" target="blank">https://github.com/AlexH893/</a> | <a id="resumeLink2" href="https://www.linkedin.com/in/alexhaefner/" target="blank">https://www.linkedin.com/in/alexhaefner/</a>
+         <a id="resumeLink1" href="https://github.com/AlexH893/" target="blank">github.com/AlexH893/</a> | <a id="resumeLink2" href="https://www.linkedin.com/in/alexhaefner/" target="blank">linkedin.com/in/alexhaefner/</a>
          <br>
          <p id="contactText">641-569-0353, alexhaefner@live.com</p>
-         <hr>
+         <hr id ="hr">
 
          <!--Skills section-->
          <div class="row">
@@ -37,12 +44,12 @@
           <p id ="skillsList">JavaScript<br>PHP<br>C#/.NET</p>
           </div>
           <div class="col w-10" style="display: inline-block;">
-            <p id ="skillsList">HTML/CSS/XML<br>Selenium<br>UAT</p>
+            <p id ="skillsList">HTML/CSS/XML<br>Selenium WebDriver<br>UAT</p>
             </div>
         </div>
         <!--End of skills section-->
-        <hr>
-         <!--Employment section-->
+        <hr id ="hr">
+        <!--Employment section-->
          <div class="row">
           <div class="col w-10" style="display: inline-block;">
           <p id ="employmentHeader">EMPLOYMENT HISTORY</p>
@@ -87,8 +94,8 @@
       </ul> 
       <!--End of employment tasks--> 
       <!--End of employment-->       
-      <hr>
-         <!--Education section-->
+      <hr id ="hr">
+      <!--Education section-->
          <div class="row">
           <div class="col w-10" style="display: inline-block;">
           <p id ="educationHeader">EDUCATION</p>
@@ -100,36 +107,47 @@
              </div>
          </div>
          <div class="col w-20">
-          <p id ="collegeName1">Indian Hills Community College</p><p id="collegeDate1">Aug 2015 — May 2017</p><p id="collegeLocation1">Ottumwa, Iowa</p>
+          <p id ="collegeName1">Indian Hills Community College</p><p id="collegeLocation1">Ottumwa, Iowa</p><p id="collegeDate1">Aug 2015 — May 2017</p>
           </div>
           <p id ="collegeDesc1">
             Associate's of Applied Science <br> Majored in Computer Software Development<br>
               Course Highlights: JavaScript, PHP, Mobile Application Development, Java/C#/VB, IT Project Management, 
               SQL, Web Design and Management</p>
               <div class="col w-20">
-                <p id ="collegeName2">Bellevue University</p><p id="collegeDate2">Aug 2015 — May 2017</p><p id="collegeLocation2">Bellevue, Nebraska/Remote</p>
+                <p id ="collegeName2">Bellevue University</p><p id="collegeLocation2">Bellevue, Nebraska/Remote</p><p id="collegeDate2">Aug 2015 — May 2017</p>
                 </div>
                 <p id ="collegeDesc2">
                   BS <br> Majoring in Web Development<br>
                     Course Highlights: Enterprise JavaScript, Node.js</p> 
+                    <br>
 
+<!-- 
+  Download button
+    On click, PDF file will directly download, at the same time Arrow.show(num)
+    will execute where num is the time visual effect will display in milliseconds
+-->
 
-
-
-
-
+<!-- Face 1-->
+  <a class="face-button" onclick="Arrow.show(4000);" href="other/resume.pdf" download="Alex resume"> 
+    <div class="face-primary">
+      <span class="fa fa-download"></span>
+      Download
+    </div>
+<!-- Face 2-->
+    <div class="face-secondary">
+      <span class="fa fa-file-pdf-o"></span>
+      Size: 52 kt
+    </div>
+  </a>
+<!-- End download button-->
 
       <!--END RESUME-->
-
-        
       </div>
-
-
 
       <div class="col-sm-2"></div>
    </div>
    <script src="js/footer.js"></script>
    <footer-component></footer-component>
-   <script src="js/scrollToTop.js"></script>  
+   <script src="js/scrollToTop.js"></script> 
    </body>
 </html>
