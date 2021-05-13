@@ -1,0 +1,187 @@
+
+/* Positioning of resume */
+
+#resume {
+
+	padding-right: 8rem;
+
+}
+
+
+/* Resume header */
+
+.col #resumeName {
+	text-align: center;
+    padding-right: 1em;
+    margin-top: 1.1em;
+}
+
+
+/**Github and linkedin links */
+
+.col #resumeLink1 {
+	overflow: hidden;
+	font-size: 15px;
+	padding-left: 12em;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+.col #resumeLink2 {
+	overflow: hidden;
+	font-size: 15px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/**Phone number and email*/
+
+.col #contactText {
+	padding-left: 14rem;
+	font-size: 15px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/**
+Line styling
+ Getting rid of the border the user agent stylesheet added,
+ setting a border along a single edge to have uniform styling among hrs
+ */
+
+.col #hr {
+    border: 0;
+    border-top: 2px solid #07234f;
+}
+
+
+
+/**Skills header*/
+
+.col #skillsHeader {
+	text-align: left;
+}
+
+
+/* List of technical skills */
+
+.col #skillsList {
+	font-size: 15px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/* Selecting section headers */
+
+.col #employmentHeader,
+#educationHeader,
+#skillsHeader {
+	font-size: 21px;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+/* Locations of employment */
+
+.col #employmentLocation1,
+#employmentLocation2 {
+	font-size: 13px;
+	text-align: center;
+	margin-bottom: 2.2em;
+	font-family: 'Raleway', sans-serif;
+	padding-right: 3rem;
+
+	
+}
+
+
+/* Dates of employment */
+
+.col #workDate1,
+#workDate2 {
+	font-size: 10px;
+	text-align: center;
+	margin-top: -3em;
+	margin-bottom: 2em;
+	font-family: 'Raleway', sans-serif;
+	padding-right: 3rem;
+
+}
+
+
+/* Employment name, college names */
+
+.col #employmentName1,
+#collegeName1,
+#collegeName2 {
+	text-align: center;
+	margin-bottom: 1px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
+	padding-right: 3rem;
+
+}
+
+
+/* Locations of colleges */
+
+.col #collegeLocation1,
+#collegeLocation2 {
+	font-size: 13px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+    margin-bottom: -2px;
+	padding-right: 3rem;
+
+
+    
+}
+
+
+/* Dates of college attendance */
+
+.col #collegeDate1,
+#collegeDate2 {
+	font-size: 10px;
+	text-align: center;
+	padding-right: 3rem;
+
+}
+
+
+/* Tasks of first employment */
+
+.col #employment1tasks,
+#employment1tasks1 {
+	font-size: 15px;
+	line-height: 1.5em;
+	margin-bottom: -1px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/* Last task for employment 1 */
+
+.col #lastTask {
+	font-size: 15px;
+	line-height: 1.5em;
+	margin-bottom: 15px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/* Description of colleges */
+
+#collegeDesc1,
+#collegeDesc2 {
+	font-size: 15px;
+	line-height: 1.5em;
+	font-family: 'Raleway', sans-serif;
+}
+
+#arrow-chrome:hover {
+
+opacity: 0;
+
+}
