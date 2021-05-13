@@ -1,0 +1,62 @@
+.face-button {
+  height: 50px;
+  display: inline-block;
+  border: 1px solid #E89A94;
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #634240;
+  overflow: hidden;
+margin-left: 17.1rem;
+  opacity: 0.7;
+  width: 130px;
+  border-radius: 4px;
+	left: 0;
+	bottom: 0;
+}
+
+/* Styling for hovering over btn */
+.face-button:hover {
+  opacity: 1;
+}
+
+
+.face-button .icon {
+  margin-right: 6px;
+}
+
+
+.face-button .face-primary,
+.face-button .face-secondary {
+  display: block;
+  padding: 0 32px;
+  line-height: 50px;
+  transition: margin 3s;
+  
+}
+
+/* Styling for btn & first face */
+.face-button .face-primary {
+  background-color: #E89A94;
+  color: #634240;
+}
+
+/* How far up the second face scrolls */
+.face-button:hover .face-primary {
+  margin-top: -50px;
+}
+
+/* Styling for second btn face */
+.face-secondary {
+
+  background-color: #E89A94;
+}
+
+/* Removing underline from text */
+a.face-button:hover:hover {
+  text-decoration: none;
+  color: #634240;
+
+
+}
