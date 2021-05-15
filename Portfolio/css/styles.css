@@ -13,6 +13,8 @@
 .navbar-fixed-left .navList a.link {
 	color: #634240;
 	opacity: 0.85;
+	font-family: 'Raleway', sans-serif;
+
 }
 
 .navbar-fixed-left .navList a.link:hover {
@@ -69,13 +71,21 @@
 	margin-left: -2.5rem;
 	font-size: 4rem;
 	font-family: 'Raleway', sans-serif;
+	margin-top: -0.2em
 }
 
 #alexh4 {
-	margin-left: 2rem;
+	margin-left: 1rem;
 	margin-bottom: 1em;
 	font-size: 2rem;
 	font-family: 'Raleway', sans-serif;
+}
+
+#codeImg {
+	width: 150px; 
+	height: 150px; 
+	margin-left: 4.5rem;
+	margin-top: 2em;
 }
 
 #codeImg:hover {
@@ -123,6 +133,8 @@ p#welcomeText {
 .col .aboutMe {
 	padding-top: 2.5rem;
 	line-height: 2rem;
+	font-family: 'Raleway', sans-serif;
+
 }
 
 
