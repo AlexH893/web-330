@@ -4,7 +4,8 @@
 {
     display: grid;
     grid-template-columns: auto auto auto;
-    
+    font-family: 'Raleway', sans-serif;
+
     grid-gap: 15px;
     background-color:rgba(0, 0, 0, 0);
 
@@ -41,6 +42,9 @@ div.card {
 
 .card-title {
 text-align: center;
+font-family: 'Raleway', sans-serif;
+font-weight: bold;
+
 /* font-style: oblique; */
 }
 
@@ -49,5 +53,13 @@ text-align: center;
 
 text-align: center;
 font-weight: bold;
+font-family: 'Raleway', sans-serif;
+
 }
 
+div.card-title a {
+
+    color: #634240;
+    text-decoration: underline;
+
+}
